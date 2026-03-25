@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turn Family Photos Into Stories With AI — Here's How PostMem Works</title>
+  <meta name="description" content="Upload family photos. AI groups them and asks you questions. You answer. PostMem organizes your answers into stories you can share and print. See exactly how it works.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2a2018',
+            warm: '#f5f0eb',
+            accent: '#c4834c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Georgia', serif; }
+    h1, h2, h3, h4 { font-family: system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PostMem",
+    "url": "https://www.postmem.com",
+    "description": "AI-powered family photo story preservation."
+  }
+  </script>
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to be a good writer to use PostMem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You don't write anything — you answer questions. PostMem shows you a group of photos and asks things like 'Who is this?' and 'What happened here?' You answer with a few typed words or a 30-second voice note. AI organizes your answers into a readable narrative."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is PostMem different from Google Photos or iCloud?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Photos and iCloud store and sort your photos. They don't capture the stories behind them. PostMem takes organized photos and turns them into written stories with names, context, and meaning — stories you can share and print."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to get my first story?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "About 10-15 minutes from upload to finished story. Upload a batch of photos (2-4 minutes). Review the AI-grouped clusters (1-2 minutes). Answer questions about one group (3-5 minutes). Review and edit the organized story (2-3 minutes)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can multiple family members contribute to the same story?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This feature is coming soon. Right now, one person manages the account and provides answers. We're building family collaboration so multiple people can add their own memories to the same photo groups."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my data if PostMem shuts down?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can export your full archive (photos, stories, metadata) at any time in standard formats. We're also building automated backup notifications so you'll always have a local copy. Your stories belong to you, not to us."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Turn Family Photos Into Stories With AI",
+    "description": "Use PostMem to transform scattered family photos into written family narratives in three steps.",
+    "totalTime": "PT15M",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Upload Your Photos", "text": "Connect your photo library — iCloud, Google Photos, or upload directly. AI scans, deduplicates, identifies faces, and groups related photos into clusters." },
+      { "@type": "HowToStep", "position": 2, "name": "AI Asks, You Answer", "text": "For each photo group, AI asks targeted questions about who's in the photos and what happened. You answer with text or a voice note. AI organizes your answers into a written narrative." },
+      { "@type": "HowToStep", "position": 3, "name": "Share and Preserve", "text": "Every story becomes a shareable link. Build a growing family archive. Compile into a printed book when ready." }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-warm text-brand">
+
+  <!-- Nav -->
+  <nav class="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold tracking-tight">PostMem</a>
+    <div class="space-x-4 text-sm">
+      <a href="storyworth-alternative.html" class="text-brand/60 hover:text-accent">Compare</a>
+      <a href="#cta" class="bg-accent text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition">Get Started →</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="max-w-3xl mx-auto px-6 pt-16 pb-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+      Turn Family Photos Into Stories With AI — Here's How PostMem Works
+    </h1>
+    <p class="text-brand/50 text-lg mt-1 mb-4">用 AI 把家庭照片变成故事——PostMem 的工作原理</p>
+    <p class="text-lg text-brand/70 max-w-2xl mx-auto mb-4">
+      You have thousands of family photos spread across your phone, an old laptop, iCloud, maybe a box in the closet. Each one holds a memory. But right now, they're just files — unnamed, unsorted, and slowly losing context as the people who remember them get older.
+    </p>
+    <p class="text-brand/50 text-sm mt-1 mb-4 max-w-2xl mx-auto">你有成千上万张家庭照片散布在手机、旧笔记本电脑、iCloud，也许还有衣柜里的一个箱子。每张都承载着一段记忆。但现在，它们只是文件——没有名字、没有分类，随着记得它们的人越来越老，背景信息在慢慢流失。</p>
+    <p class="text-brand/80 max-w-2xl mx-auto mb-4">PostMem turns those scattered photos into organized, written family stories. You upload your photos. AI groups them by people, places, and moments. Then it asks you questions about what it finds — and organizes your answers into stories you can share with family or print as a book.</p>
+    <p class="text-brand/50 text-sm mt-1 max-w-2xl mx-auto mb-6">PostMem 把这些散落的照片变成有条理的家庭文字故事。你上传照片。AI 按人物、地点和时刻分组。然后它就发现的内容向你提问——并把你的回答整理成可以与家人分享或印刷成书的故事。</p>
+    <p class="text-brand/80 font-medium max-w-2xl mx-auto mb-8">One thing to know upfront: PostMem does not write your family's stories for you. AI surfaces what's in your photos and asks the right questions. You provide the meaning. The stories are yours — your memories, your words, your voice.</p>
+    <p class="text-brand/50 text-sm mt-1 max-w-2xl mx-auto mb-8">有一点要事先说明：PostMem 不会替你写家庭故事。AI 挖掘照片中的内容并提出正确的问题。你提供意义。故事是你的——你的记忆、你的话语、你的声音。</p>
+    <a href="https://postmem.com" class="inline-block bg-accent text-white px-8 py-4 rounded-xl text-lg font-medium hover:opacity-90 transition">See How It Works →</a>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6">
+
+    <!-- What Is Photo-to-Story AI -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">What Is Photo-to-Story AI?</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">什么是照片转故事 AI？</p>
+      <p class="text-brand/80 leading-relaxed mb-4">"Photo-to-story AI" is a new category. Most people haven't heard the term because, until recently, the technology to make it work didn't exist. Here's what it means in practice:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">"照片转故事 AI"是一个新品类。大多数人没听过这个词，因为直到最近，使其成为可能的技术才出现。以下是它在实际中的含义：</p>
+      <p class="text-brand/80 leading-relaxed mb-4"><strong>Photo-to-story AI reads the visual content in your photos</strong> — faces, locations, timestamps, objects, text — and uses that information to group related photos together. It then asks you specific questions about each group. You answer. AI organizes your answers into a written narrative attached to those photos.</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4"><strong>照片转故事 AI 读取你照片中的视觉内容</strong>——人脸、地点、时间戳、物体、文字——然后用这些信息把相关照片归组。接着它向你提出关于每组的具体问题。你回答。AI 把你的回答整理成与这些照片关联的书面叙述。</p>
+      <p class="text-brand/80 leading-relaxed mb-4">To be explicit about what AI does and doesn't do here:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">明确说明 AI 在这里做什么和不做什么：</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 mt-1">✓</span><span class="text-brand/80"><strong>AI identifies</strong> faces, locations, dates, and visual patterns across your photos</span></li>
+        <li class="text-brand/50 text-sm list-none ml-8"><strong>AI 识别</strong>你照片中的人脸、地点、日期和视觉模式</li>
+        <li class="flex items-start gap-3"><span class="text-green-600 mt-1">✓</span><span class="text-brand/80"><strong>AI groups</strong> related photos into moments and timelines</span></li>
+        <li class="text-brand/50 text-sm list-none ml-8"><strong>AI 分组</strong>相关照片为时刻和时间线</li>
+        <li class="flex items-start gap-3"><span class="text-green-600 mt-1">✓</span><span class="text-brand/80"><strong>AI asks</strong> you targeted questions about what it finds</span></li>
+        <li class="text-brand/50 text-sm list-none ml-8"><strong>AI 提问</strong>关于它发现的内容的针对性问题</li>
+        <li class="flex items-start gap-3"><span class="text-green-600 mt-1">✓</span><span class="text-brand/80"><strong>AI organizes</strong> your spoken or typed answers into readable narratives</span></li>
+        <li class="text-brand/50 text-sm list-none ml-8"><strong>AI 整理</strong>你的口述或文字回答为可读的叙述</li>
+        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-brand/80"><strong>AI does not</strong> invent facts, guess relationships, or fill in details you didn't provide</span></li>
+        <li class="text-brand/50 text-sm list-none ml-8"><strong>AI 不会</strong>编造事实、猜测关系或填充你没有提供的细节</li>
+      </ul>
+      <p class="text-brand/80 leading-relaxed">The stories come from you. AI is the structure; you are the source.</p>
+      <p class="text-brand/50 text-sm mt-1">故事来自你。AI 是结构；你是来源。</p>
+    </section>
+
+    <!-- How PostMem Works (3 Steps) -->
+    <section class="mb-16" id="how">
+      <h2 class="text-2xl font-bold mb-8 text-center">How PostMem Works (3 Steps)</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-8 text-center">PostMem 如何工作（3 个步骤）</p>
+
+      <div class="space-y-12">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-4xl font-bold text-accent">1</span>
+            <h3 class="text-xl font-bold">Upload Your Photos</h3>
+          </div>
+          <p class="text-brand/50 text-sm mt-1 mb-4">上传你的照片</p>
+          <p class="text-brand/80 leading-relaxed mb-3"><strong>What you do:</strong> Connect your iCloud or Google Photos account, or upload directly from your phone, computer, or external hard drive. Any common image format works (JPG, PNG, HEIC, TIFF).</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3"><strong>你做什么：</strong>连接 iCloud 或 Google Photos 账户，或从手机、电脑或外置硬盘直接上传。支持常见图片格式（JPG、PNG、HEIC、TIFF）。</p>
+          <p class="text-brand/80 leading-relaxed mb-3"><strong>What AI does:</strong> Scans every photo for faces, reads timestamps and location data, identifies visual patterns, and groups related photos into clusters. Duplicates and near-duplicates are flagged.</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3"><strong>AI 做什么：</strong>扫描每张照片的人脸，读取时间戳和位置数据，识别视觉模式，并将相关照片聚类。标记重复和近似重复。</p>
+          <div class="bg-warm rounded-lg p-4 mt-4">
+            <p class="text-brand/80 text-sm"><strong>Realistic example:</strong> You upload 847 photos from your phone's camera roll. PostMem groups them into 34 moments. Some groups are spot-on ("Thanksgiving 2019 — 11 photos"). Others need your help ("3 people at a table — location unknown"). The whole process takes about 4 minutes for 847 photos.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>真实示例：</strong>你从手机相册上传了 847 张照片。PostMem 将它们分成 34 个时刻。有些分组很准确（"2019 年感恩节——11 张照片"）。有些需要你帮助（"3 个人在桌旁——地点未知"）。847 张照片的处理大约需要 4 分钟。</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-4xl font-bold text-accent">2</span>
+            <h3 class="text-xl font-bold">AI Asks, You Answer</h3>
+          </div>
+          <p class="text-brand/50 text-sm mt-1 mb-4">AI 提问，你回答</p>
+          <p class="text-brand/80 leading-relaxed mb-3"><strong>What you do:</strong> Open any photo group. PostMem shows you the photos and asks specific questions based on what AI identified. You answer by typing a few sentences or recording a voice note — 30 seconds is usually enough.</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3"><strong>你做什么：</strong>打开任意一组照片。PostMem 展示照片并根据 AI 识别的内容提出具体问题。你通过打几句话或录语音来回答——30 秒通常就够了。</p>
+          <p class="text-brand/80 leading-relaxed mb-3"><strong>What AI does:</strong> Reads the visual content, identifies what it can determine (date, number of people, setting) and what it cannot (names, relationships, what happened). After you answer, AI organizes your responses into a written narrative attached to the photos.</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3"><strong>AI 做什么：</strong>读取视觉内容，确定它能判断的（日期、人数、场景）和不能判断的（名字、关系、发生了什么）。你回答后，AI 把你的回答整理成与照片关联的书面叙述。</p>
+          <div class="bg-warm rounded-lg p-4 mt-4">
+            <p class="text-brand/80 text-sm"><strong>Realistic example:</strong> PostMem shows you 6 photos from a holiday dinner. It identifies 8 people, a turkey, and wood paneling. It asks: "Who are the people at this table?" and "What was the occasion?" You type: "That's my aunt Carol and uncle Pete at the head of the table. This was Thanksgiving 1998, the year Pete brought his accordion and played after dinner. Mom almost killed him." That becomes the opening of the story.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>真实示例：</strong>PostMem 向你展示一次节日晚餐的 6 张照片。它识别出 8 个人、一只火鸡和木质墙板。它问："桌旁的人是谁？""这是什么场合？"你输入："坐在主位的是我 Carol 阿姨和 Pete 叔叔。这是 1998 年感恩节，Pete 那年带了手风琴晚餐后演奏。妈妈差点把他杀了。"这成为故事的开头。</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-4xl font-bold text-accent">3</span>
+            <h3 class="text-xl font-bold">Share and Preserve</h3>
+          </div>
+          <p class="text-brand/50 text-sm mt-1 mb-4">分享与保存</p>
+          <p class="text-brand/80 leading-relaxed mb-3"><strong>What you do:</strong> Share each story with a single link — via text message, email, or family group chat. Recipients don't need an account or app. When you've built up enough stories, compile them into a printed photo book.</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3"><strong>你做什么：</strong>通过链接分享每个故事——发短信、邮件或家庭群聊。接收者不需要账号或 App。积累足够多的故事后，可以汇编成一本印刷照片书。</p>
+          <ul class="space-y-2 text-sm text-brand/70">
+            <li class="flex items-start gap-2"><span class="text-accent">✓</span> A shareable link for each story (no login required for viewers)</li>
+            <li class="text-brand/50 text-sm list-none pl-6">每个故事一个分享链接（查看者无需登录）</li>
+            <li class="flex items-start gap-2"><span class="text-accent">✓</span> A growing family archive organized by people, places, and time</li>
+            <li class="text-brand/50 text-sm list-none pl-6">按人物、地点和时间组织的持续增长的家庭档案</li>
+            <li class="flex items-start gap-2"><span class="text-accent">✓</span> Full export of all photos, stories, and metadata at any time</li>
+            <li class="text-brand/50 text-sm list-none pl-6">随时导出所有照片、故事和元数据</li>
+            <li class="flex items-start gap-2"><span class="text-accent">✓</span> Printed book compilation (coming soon)</li>
+            <li class="text-brand/50 text-sm list-none pl-6">印刷书汇编（即将推出）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">What You Get</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">你会得到什么</p>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>Grouped photo moments</strong> — AI identifies connections across your library and clusters photos into meaningful groups</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>分组的照片时刻</strong>——AI 识别你照片库中的关联，将照片聚为有意义的组</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>Written stories based on your answers</strong> — not AI-generated fiction, but your memories organized into readable narratives</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>基于你回答的文字故事</strong>——不是 AI 生成的虚构内容，而是你的记忆被整理成可读的叙述</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>A searchable family archive</strong> — find any story or photo by person, date, location, or keyword</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>可搜索的家庭档案</strong>——按人物、日期、地点或关键词查找任何故事或照片</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>Shareable links</strong> — each story has its own link; recipients view in a browser with no account needed</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>分享链接</strong>——每个故事有自己的链接；接收者在浏览器中查看，无需账号</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>A growing collection</strong> — add photos and stories over time; more family members contribute</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>持续增长的收藏</strong>——随时间添加照片和故事；更多家人参与贡献</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What PostMem Does NOT Do -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">What PostMem Does NOT Do</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">PostMem 不做什么</p>
+      <p class="text-brand/80 leading-relaxed mb-4">We'd rather be honest now than disappoint you later:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">我们宁愿现在坦诚，也不愿之后让你失望：</p>
+      <div class="space-y-3 text-sm">
+        <div class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-brand/80"><strong>Does not invent facts.</strong> If you don't provide information, AI doesn't guess.</span></div>
+        <div class="text-brand/50 text-sm ml-8"><strong>不会编造事实。</strong>如果你不提供信息，AI 不会猜测。</div>
+        <div class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-brand/80"><strong>Does not produce stories without your input.</strong> AI organizes; you provide the memories.</span></div>
+        <div class="text-brand/50 text-sm ml-8"><strong>没有你的输入不会产出故事。</strong>AI 整理；你提供记忆。</div>
+        <div class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-brand/80"><strong>Does not work well with very few photos.</strong> If you have fewer than 20 photos, the grouping will be limited. Works best with 100+ photos.</span></div>
+        <div class="text-brand/50 text-sm ml-8"><strong>照片很少时效果不好。</strong>如果少于 20 张照片，分组功能会受限。100 张以上效果最好。</div>
+        <div class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-brand/80"><strong>Does not replace a professional oral historian.</strong> Designed for everyday family memory preservation, not academic-grade oral history.</span></div>
+        <div class="text-brand/50 text-sm ml-8"><strong>不能替代专业口述历史学家。</strong>为日常家庭记忆保存而设计，不是学术级口述历史。</div>
+        <div class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-brand/80"><strong>Cannot identify people it has never seen.</strong> AI detects faces, but you tell it who's who. After you identify someone once, AI recognizes them across your library.</span></div>
+        <div class="text-brand/50 text-sm ml-8"><strong>不能识别从未见过的人。</strong>AI 检测到人脸，但由你告诉它是谁。你识别一次后，AI 在整个照片库中都能认出。</div>
+      </div>
+    </section>
+
+    <!-- Supported Photo Sources -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Supported Photo Sources</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">支持的照片来源</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-brand/20">
+              <th class="text-left py-3 pr-4 font-semibold">Source / 来源</th>
+              <th class="text-left py-3 px-4 font-semibold">How It Works / 方式</th>
+            </tr>
+          </thead>
+          <tbody class="text-brand/80">
+            <tr class="border-b border-brand/10"><td class="py-3 pr-4">iCloud Photos</td><td class="py-3 px-4">Connect your account; PostMem imports directly<br><span class="text-brand/50 text-xs">连接账户；PostMem 直接导入</span></td></tr>
+            <tr class="border-b border-brand/10"><td class="py-3 pr-4">Google Photos</td><td class="py-3 px-4">Connect your account; PostMem imports directly<br><span class="text-brand/50 text-xs">连接账户；PostMem 直接导入</span></td></tr>
+            <tr class="border-b border-brand/10"><td class="py-3 pr-4">Phone upload</td><td class="py-3 px-4">Select photos from your camera roll<br><span class="text-brand/50 text-xs">从手机相册选择照片</span></td></tr>
+            <tr class="border-b border-brand/10"><td class="py-3 pr-4">Computer upload</td><td class="py-3 px-4">Drag and drop from any folder<br><span class="text-brand/50 text-xs">从任意文件夹拖拽</span></td></tr>
+            <tr class="border-b border-brand/10"><td class="py-3 pr-4">External hard drive</td><td class="py-3 px-4">Upload from any connected storage<br><span class="text-brand/50 text-xs">从连接的存储设备上传</span></td></tr>
+            <tr><td class="py-3 pr-4">Scanned physical photos</td><td class="py-3 px-4">Upload scanned images in JPG, PNG, HEIC, or TIFF<br><span class="text-brand/50 text-xs">上传 JPG、PNG、HEIC 或 TIFF 格式的扫描图片</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-brand/70 text-sm mt-4"><strong>Note on physical photos:</strong> PostMem works with digital files. If you have printed photos, you'll need to digitize them first (scanner, phone scanning app, or a service like iMemories).</p>
+      <p class="text-brand/50 text-sm mt-1"><strong>关于实体照片：</strong>PostMem 使用数字文件。如果你有冲印照片，需要先数字化（扫描仪、手机扫描 App 或 iMemories 等服务）。</p>
+    </section>
+
+    <!-- Privacy -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Privacy & Your Data</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">隐私与你的数据</p>
+      <p class="text-brand/80 leading-relaxed mb-4">Your family's photos and stories are deeply personal. Here's exactly how we handle them:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">你家庭的照片和故事是非常私密的。以下是我们处理它们的方式：</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border border-brand/10 rounded-xl p-5">
+          <p class="font-bold text-sm mb-2">Encrypted in transit and at rest</p>
+          <p class="text-brand/50 text-xs mb-2">传输和存储均加密</p>
+          <p class="text-sm text-brand/70">Your photos and stories are encrypted when uploaded and when stored.</p>
+          <p class="text-brand/50 text-xs mt-1">上传和存储时均加密。</p>
+        </div>
+        <div class="border border-brand/10 rounded-xl p-5">
+          <p class="font-bold text-sm mb-2">Never used to train AI models</p>
+          <p class="text-brand/50 text-xs mb-2">绝不用于训练 AI 模型</p>
+          <p class="text-sm text-brand/70">Your family memories are not training data. Period.</p>
+          <p class="text-brand/50 text-xs mt-1">你的家庭记忆不是训练数据。句号。</p>
+        </div>
+        <div class="border border-brand/10 rounded-xl p-5">
+          <p class="font-bold text-sm mb-2">You control sharing</p>
+          <p class="text-brand/50 text-xs mb-2">你控制分享权限</p>
+          <p class="text-sm text-brand/70">Every story is private by default. You choose who sees it. Revoke access anytime.</p>
+          <p class="text-brand/50 text-xs mt-1">每个故事默认私密。你决定谁可以看。随时可以撤销访问权限。</p>
+        </div>
+        <div class="border border-brand/10 rounded-xl p-5">
+          <p class="font-bold text-sm mb-2">Export or delete anytime</p>
+          <p class="text-brand/50 text-xs mb-2">随时导出或删除</p>
+          <p class="text-sm text-brand/70">Download your full archive or delete everything permanently. No lock-in.</p>
+          <p class="text-brand/50 text-xs mt-1">下载你的完整档案或永久删除所有内容。没有锁定。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="mb-16 text-center">
+      <h2 class="text-2xl font-bold mb-4">Pricing</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">定价</p>
+      <div class="bg-white rounded-2xl p-8 shadow-sm max-w-md mx-auto">
+        <p class="text-3xl font-bold text-accent mb-2">Starting at $19/month</p>
+        <p class="text-brand/50 text-sm mb-4">$19/月起</p>
+        <ul class="text-sm text-brand/70 space-y-2 text-left">
+          <li>• <strong>Free trial available</strong> — upload your first photos and create stories at no cost</li>
+          <li class="text-brand/50 text-xs list-none ml-4">提供免费试用——免费上传第一批照片并创建故事</li>
+          <li>• No credit card required to start</li>
+          <li class="text-brand/50 text-xs list-none ml-4">开始使用无需信用卡</li>
+          <li>• Cancel anytime — no long-term contract</li>
+          <li class="text-brand/50 text-xs list-none ml-4">随时取消——没有长期合同</li>
+        </ul>
+        <p class="text-brand/60 text-xs mt-4 italic">Pricing subject to change — check <a href="https://postmem.com" class="text-accent hover:underline">postmem.com</a> for current pricing.</p>
+        <p class="text-brand/50 text-xs mt-1 italic">价格可能变动——请访问 <a href="https://postmem.com" class="text-accent hover:underline">postmem.com</a> 查看最新定价。</p>
+      </div>
+    </section>
+
+    <!-- Current Status -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4 text-center">Current Status</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6 text-center">当前状态</p>
+      <div class="bg-brand/5 border border-brand/20 rounded-xl p-6 max-w-lg mx-auto">
+        <p class="text-brand/80 leading-relaxed mb-3">PostMem is in <strong>early access</strong>. Here's where things stand:</p>
+        <p class="text-brand/50 text-sm mt-1 mb-3">PostMem 目前处于<strong>早期访问</strong>阶段。以下是当前进展：</p>
+        <p class="font-bold text-sm text-brand mb-2">Live now:</p>
+        <ul class="text-sm text-brand/70 space-y-1 mb-4">
+          <li>• Photo upload (phone, computer, cloud accounts)</li>
+          <li>• AI photo grouping and face detection</li>
+          <li>• Question prompts for each photo group</li>
+          <li>• Story organization from your answers</li>
+          <li>• Shareable story links</li>
+          <li>• Full data export</li>
+        </ul>
+        <p class="font-bold text-sm text-brand mb-2">Coming soon:</p>
+        <ul class="text-sm text-brand/70 space-y-1">
+          <li>• Printed book compilation</li>
+          <li>• Advanced face recognition improvements</li>
+          <li>• Family collaboration (multiple contributors)</li>
+          <li>• Voice note transcription improvements</li>
+        </ul>
+        <p class="mt-4 text-brand/80 text-sm"><a href="https://postmem.com" class="text-accent hover:underline">Join the waitlist</a> to get early access.</p>
+        <p class="text-brand/50 text-sm mt-1"><a href="https://postmem.com" class="text-accent hover:underline">加入等待列表</a>获取早期访问权限。</p>
+      </div>
+    </section>
+
+    <!-- Who Is For -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Who PostMem Is For</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">PostMem 适合谁</p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold mb-2">The family archivist who has 20 years of unsorted photos.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-2">有 20 年未整理照片的家庭档案管理者。</p>
+          <p class="text-brand/80 text-sm">You've been saving everything — tens of thousands of files across devices. PostMem does the organizing and helps you add the stories while you still remember them.</p>
+          <p class="text-brand/50 text-sm mt-1">你一直在保存所有东西——数万个文件散布在各种设备上。PostMem 帮你整理，并在你还记得的时候帮你添加故事。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold mb-2">The adult child whose parents are getting older.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-2">父母渐渐老去的成年子女。</p>
+          <p class="text-brand/80 text-sm">Your mom knows who everyone is in those old photos. PostMem lets her look at a photo, answer a few questions, and those answers become the story. Low effort for her, permanent record for the family.</p>
+          <p class="text-brand/50 text-sm mt-1">你妈妈认识老照片里的每一个人。PostMem 让她看照片、回答几个问题，回答就变成故事。她省力，家庭得到永久记录。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold mb-2">The person who tried StoryWorth but couldn't sustain it.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-2">试过 StoryWorth 但坚持不下去的人。</p>
+          <p class="text-brand/80 text-sm">PostMem flips the approach: start with photos that already exist. <a href="storyworth-alternative.html" class="text-accent hover:underline">See how PostMem compares to StoryWorth</a>.</p>
+          <p class="text-brand/50 text-sm mt-1">PostMem 颠覆了方式：从已有的照片开始。<a href="storyworth-alternative.html" class="text-accent hover:underline">看看 PostMem 和 StoryWorth 的对比</a>。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold mb-2">The grandparent who wants to leave something behind.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-2">想留下些什么的祖父母。</p>
+          <p class="text-brand/80 text-sm">You don't need to be tech-savvy. You don't need to write well. Just look at your photos and talk about what you remember.</p>
+          <p class="text-brand/50 text-sm mt-1">你不需要懂技术。你不需要擅长写作。只需要看着照片，说说你记得的事。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Is NOT For -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Who PostMem Is NOT For</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">PostMem 不适合谁</p>
+      <div class="space-y-3 text-sm">
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <p class="text-brand/80"><strong>Professional genealogists</strong> building formal family trees. PostMem preserves stories, not lineage charts. Use Ancestry or MyHeritage instead.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>专业族谱研究者。</strong>PostMem 保存故事，不做族谱。请用 Ancestry 或 MyHeritage。</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <p class="text-brand/80"><strong>People looking for AI to write fictional stories</strong> from photos. PostMem does not invent or embellish.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>想让 AI 根据照片写虚构故事的人。</strong>PostMem 不编造也不渲染。</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <p class="text-brand/80"><strong>Anyone with fewer than 20 photos.</strong> A simple photo album or notes app will work fine for small collections.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>照片少于 20 张的人。</strong>小收藏用简单的相册或备忘录 App 就够了。</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <p class="text-brand/80"><strong>People who want fully automated output with zero involvement.</strong> AI asks questions; you provide answers. No input = no story.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>想要完全自动化、零参与的人。</strong>AI 提问；你回答。没有输入 = 没有故事。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4 text-center">常见问题</p>
+      <div class="space-y-4">
+        <details class="group bg-white rounded-xl p-6 shadow-sm" open>
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">Do I need to be a good writer?<span class="text-accent group-open:rotate-180 transition-transform">▾</span></summary>
+          <p class="text-brand/50 text-sm mt-1">我需要擅长写作吗？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">No. You don't write anything — you answer questions. PostMem shows you photos and asks things like "Who is this?" and "What happened here?" You answer with a few typed words or a 30-second voice note. AI organizes your answers into a readable narrative.</p>
+          <p class="text-brand/50 text-sm mt-1">不需要。你不需要写任何东西——你回答问题。PostMem 展示照片并提问"这是谁？""这里发生了什么？"你用几个字或一段 30 秒的语音回答。AI 把你的回答整理成可读的叙述。</p>
+        </details>
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">How is this different from Google Photos?<span class="text-accent group-open:rotate-180 transition-transform">▾</span></summary>
+          <p class="text-brand/50 text-sm mt-1">这和 Google Photos 有什么不同？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">Google Photos and iCloud store and sort your photos. They'll group by face or location, but they don't capture the stories behind them. PostMem takes organized photos and turns them into written stories with names, context, and meaning.</p>
+          <p class="text-brand/50 text-sm mt-1">Google Photos 和 iCloud 存储整理你的照片。它们能按人脸或地点分组，但不会捕捉背后的故事。PostMem 把整理好的照片变成有名字、有背景、有意义的文字故事。</p>
+        </details>
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">How long does it take to get my first story?<span class="text-accent group-open:rotate-180 transition-transform">▾</span></summary>
+          <p class="text-brand/50 text-sm mt-1">多久能得到第一个故事？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">About 10-15 minutes from upload to finished story. Upload photos (2-4 min), review AI-grouped clusters (1-2 min), answer questions about one group (3-5 min), review and edit (2-3 min). Subsequent stories are faster as faces are already identified.</p>
+          <p class="text-brand/50 text-sm mt-1">从上传到完成故事大约 10-15 分钟。上传照片（2-4 分钟），查看 AI 分组（1-2 分钟），回答一组的问题（3-5 分钟），审核编辑（2-3 分钟）。后续故事更快，因为人脸已被识别。</p>
+        </details>
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">Can multiple family members contribute?<span class="text-accent group-open:rotate-180 transition-transform">▾</span></summary>
+          <p class="text-brand/50 text-sm mt-1">多个家人可以参与吗？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">This feature is coming soon. Right now, one person manages the account. We're building family collaboration so multiple people can add their own memories to the same photo groups — because different people remember different details.</p>
+          <p class="text-brand/50 text-sm mt-1">这个功能即将推出。目前由一个人管理账户。我们正在构建家庭协作功能，让多人能向同一组照片添加自己的记忆——因为不同的人记得不同的细节。</p>
+        </details>
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">What happens to my data if PostMem shuts down?<span class="text-accent group-open:rotate-180 transition-transform">▾</span></summary>
+          <p class="text-brand/50 text-sm mt-1">如果 PostMem 关闭了我的数据会怎样？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">You can export your full archive (photos, stories, metadata) at any time in standard formats. We're also building automated backup notifications. Your stories belong to you, not to us.</p>
+          <p class="text-brand/50 text-sm mt-1">你可以随时以标准格式导出完整档案（照片、故事、元数据）。我们还在构建自动备份通知。你的故事属于你，不是我们的。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="text-center py-16 mb-12">
+      <h2 class="text-2xl font-bold mb-4">Your Photos Already Hold the Stories</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">你的照片里已经藏着故事</p>
+      <p class="text-brand/70 mb-4 max-w-xl mx-auto">You've been carrying these photos — and the responsibility to do something with them — for years. The people in them deserve to be named. The moments deserve to be remembered.</p>
+      <p class="text-brand/50 text-sm mt-1 mb-6 max-w-xl mx-auto">你背负这些照片——以及对它们"该做点什么"的责任感——已经好多年了。照片中的人值得被叫出名字。那些时刻值得被记住。</p>
+      <a href="https://postmem.com" class="inline-block bg-accent text-white px-8 py-4 rounded-xl text-lg font-medium hover:opacity-90 transition">Get Started at PostMem.com →</a>
+    </section>
+
+    <!-- Author Byline -->
+    <div class="text-center mb-8">
+      <p class="text-brand/40 text-sm">By PostMem Team · Published March 16, 2026 · Updated March 25, 2026</p>
+      <p class="text-brand/50 text-xs mt-1">PostMem 团队 · 发布于 2026 年 3 月 16 日 · 更新于 2026 年 3 月 25 日</p>
+    </div>
+
+    <!-- Sources -->
+    <section class="mb-16 border-t border-brand/10 pt-8">
+      <h2 class="text-xl font-bold mb-4">Sources & References</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">来源与参考</p>
+      <ul class="space-y-2 text-sm text-brand/60">
+        <li>InfoTrends / Keypoint Intelligence. (2023). U.S. consumers store an average of 2,000+ photos per device, with total household photo libraries averaging 20,000-50,000 images.</li>
+        <li>Conway, M. A., & Pleydell-Pearce, C. W. (2000). The construction of autobiographical memories in the self-memory system. <em>Psychological Review</em>, 107(2), 261-288.</li>
+        <li>Library of Congress. Personal Digital Archiving. <a href="https://www.digitalpreservation.gov/personalarchiving/" class="text-accent hover:underline">digitalpreservation.gov</a></li>
+        <li>Pew Research Center. (2024). Americans and Digital Trust. <a href="https://www.pewresearch.org/" class="text-accent hover:underline">pewresearch.org</a></li>
+      </ul>
+    </section>
+
+    <div class="text-center mb-8">
+      <a href="index.html" class="text-accent hover:underline text-sm">← Back to all articles</a>
+    </div>
+
+  </main>
+
+  <footer class="max-w-4xl mx-auto px-6 py-8 border-t border-brand/10 text-sm text-brand/50 flex justify-between">
+    <span>Last updated: March 25, 2026 · &copy; 2026 PostMem</span>
+    <div class="space-x-4">
+      <a href="storyworth-alternative.html" class="hover:text-accent">Compare</a>
+      <a href="what-to-do-with-old-family-photos.html" class="hover:text-accent">Blog</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostMem SEO 七层框架详解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2a2018',
+            warm: '#f5f0eb',
+            accent: '#c4834c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Georgia', serif; }
+    h1, h2, h3, h4 { font-family: system-ui, -apple-system, sans-serif; }
+    .layer-card { border-left: 4px solid #c4834c; }
+  </style>
+</head>
+<body class="bg-warm text-brand">
+
+  <!-- Header -->
+  <header class="bg-brand text-warm py-6">
+    <div class="max-w-4xl mx-auto px-6">
+      <a href="index.html" class="text-warm/60 text-sm hover:text-warm">&larr; 返回总览</a>
+      <h1 class="text-3xl font-bold mt-3">PostMem SEO 七层框架详解</h1>
+      <p class="text-warm/70 mt-2">SEO 不是"写博客"，是一个从业务目标到数据验证的完整搜索获客系统。</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    <!-- 全局架构图 -->
+    <section class="mb-12">
+      <div class="bg-white rounded-2xl p-8 shadow-sm">
+        <h2 class="text-xl font-bold mb-4">全局架构图</h2>
+        <p class="text-brand/60 mb-6">框架是闭环：定目标 → 分意图 → 建页面 → 写内容 → 做技术 → 搞分发 → 看数据 → 回头修</p>
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-2 text-center text-sm">
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">1. 目标层</div>
+            <div class="text-brand/60 text-xs mt-1">为什么做</div>
+          </div>
+          <div class="flex items-center justify-center text-accent font-bold">&rarr;</div>
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">2. 关键词层</div>
+            <div class="text-brand/60 text-xs mt-1">做什么词</div>
+          </div>
+          <div class="flex items-center justify-center text-accent font-bold">&rarr;</div>
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">3. 页面层</div>
+            <div class="text-brand/60 text-xs mt-1">用什么接</div>
+          </div>
+          <div class="flex items-center justify-center text-accent font-bold">&rarr;</div>
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">4. 内容层</div>
+            <div class="text-brand/60 text-xs mt-1">写什么</div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-2 text-center text-sm mt-2">
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">5. 技术层</div>
+            <div class="text-brand/60 text-xs mt-1">能被读懂吗</div>
+          </div>
+          <div class="flex items-center justify-center text-accent font-bold">&rarr;</div>
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">6. 分发层</div>
+            <div class="text-brand/60 text-xs mt-1">有推荐信吗</div>
+          </div>
+          <div class="flex items-center justify-center text-accent font-bold">&rarr;</div>
+          <div class="bg-accent/10 rounded-lg p-3">
+            <div class="font-bold text-accent">7. 数据层</div>
+            <div class="text-brand/60 text-xs mt-1">哪里出问题</div>
+          </div>
+          <div class="flex items-center justify-center text-accent font-bold">&rarr;</div>
+          <div class="bg-accent/15 rounded-lg p-3 border border-accent/30">
+            <div class="font-bold text-accent">↩ 回到目标层</div>
+            <div class="text-brand/60 text-xs mt-1">闭环</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第 1 层：目标层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">1</span>
+          <h2 class="text-xl font-bold">目标层 — SEO 在帮 PostMem 干什么？</h2>
+        </div>
+
+        <p class="mb-4">PostMem 现在是一个没上线的产品，付费广告还没跑，品牌认知几乎为零。SEO 能做的事和不能做的事要分清楚。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-50 rounded-lg p-4">
+            <h4 class="font-bold text-green-800 mb-2">SEO 能做的事</h4>
+            <ul class="text-sm space-y-2 text-green-900">
+              <li><strong>接住已存在的搜索需求。</strong> 有人搜 "StoryWorth alternative"，让他找到我们。</li>
+              <li><strong>在 AI 搜索里占位（GEO）。</strong> 让 ChatGPT、Perplexity 回答相关问题时提到 PostMem。</li>
+              <li><strong>用内容定义品类。</strong> "photo to story AI" 还没有任何产品占领。</li>
+            </ul>
+          </div>
+          <div class="bg-red-50 rounded-lg p-4">
+            <h4 class="font-bold text-red-800 mb-2">SEO 不能做的事</h4>
+            <ul class="text-sm space-y-2 text-red-900">
+              <li><strong>创造需求。</strong> 没人搜 "PostMem" 因为没人知道你。</li>
+              <li><strong>短期爆量。</strong> SEO 是 3-6 个月的事。</li>
+              <li><strong>替代付费广告的精准获客。</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-accent/5 rounded-lg p-4 mb-4">
+          <p class="font-bold text-accent">PostMem 的 SEO 目标（一句话）</p>
+          <p class="mt-1">在付费广告之外，建一条不花钱的、持续的搜索获客通道——重点是接住竞品流量和品类需求，同时在 AI 搜索里占位。</p>
+        </div>
+
+        <h3 class="font-bold mt-6 mb-3">SEO 和 GEO 的关系</h3>
+        <p class="mb-4">GEO（AI 搜索优化）和 SEO 不是两件事，是一件事的两个出口。它们共享同一套基础设施——同一个页面、同一篇文章、同一组关键词、同一套 Schema。区别只在于谁在读你的内容：</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse mb-4">
+            <thead>
+              <tr class="bg-brand/5">
+                <th class="text-left p-3 border-b"></th>
+                <th class="text-left p-3 border-b">SEO</th>
+                <th class="text-left p-3 border-b">GEO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="p-3 font-medium">读你内容的是</td>
+                <td class="p-3">Google 爬虫</td>
+                <td class="p-3">ChatGPT / Perplexity / Google AI Overview</td>
+              </tr>
+              <tr class="border-b bg-brand/3">
+                <td class="p-3 font-medium">展示方式</td>
+                <td class="p-3">蓝色链接，用户点进来</td>
+                <td class="p-3">AI 直接引用你的内容，用户可能不点</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 font-medium">你要做的事</td>
+                <td class="p-3">写好页面、做好技术、拿到排名</td>
+                <td class="p-3">同样的页面，但要让内容更容易被引用</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-sm text-brand/60 italic">一句话区分：SEO = 让搜索引擎找到你、排上去。GEO = 让 AI 搜索引用你、说出你的名字。底层资产是同一套。</p>
+      </div>
+    </section>
+
+    <!-- 第 2 层：关键词层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">2</span>
+          <h2 class="text-xl font-bold">关键词层 — 用户会搜什么，背后是什么意图？</h2>
+        </div>
+
+        <p class="mb-4">关键词层的核心不是"找词"，而是理解搜索行为背后的意图分类。一个人从"不知道 PostMem"到"注册使用"，中间会经历不同的搜索阶段。</p>
+
+        <div class="bg-brand/5 rounded-lg p-4 mb-6 text-sm font-mono text-center">
+          不知道有问题 → 感觉有问题 → 找解决方案 → 比较方案 → 决定用哪个
+        </div>
+
+        <h3 class="font-bold mb-4">由近到远的 4 类词</h3>
+
+        <div class="space-y-4 mb-6">
+          <div class="border border-red-200 rounded-lg p-4">
+            <h4 class="font-bold text-red-700">1. 竞品拦截词 — 离转化最近</h4>
+            <p class="text-sm mt-1">用户已经在选方案了，只是还没选你。</p>
+            <p class="text-sm text-brand/60 mt-2 italic">"StoryWorth alternative" · "StoryWorth vs Remento" · "StoryWorth review"</p>
+            <p class="text-sm mt-2">这类人不需要你教育他——他在选工具。你要做的是截住他，告诉他你比竞品好在哪。</p>
+          </div>
+          <div class="border border-orange-200 rounded-lg p-4">
+            <h4 class="font-bold text-orange-700">2. 品类定义词 — 离转化较近</h4>
+            <p class="text-sm mt-1">用户知道自己想要什么能力，在搜这类方案。</p>
+            <p class="text-sm text-brand/60 mt-2 italic">"photo to story AI" · "turn family photos into stories" · "AI photo memoir"</p>
+            <p class="text-sm mt-2">特殊价值：现在没人占。谁先写出权威内容，谁就定义这个品类。</p>
+          </div>
+          <div class="border border-yellow-200 rounded-lg p-4">
+            <h4 class="font-bold text-yellow-700">3. 问题感知词 — 离转化较远</h4>
+            <p class="text-sm mt-1">用户知道自己有问题，但还不知道有什么方案。</p>
+            <p class="text-sm text-brand/60 mt-2 italic">"what to do with old family photos" · "how to preserve family stories"</p>
+            <p class="text-sm mt-2">量大，但用户还在"了解"阶段。内容需要先帮他理解问题，然后自然引导到 PostMem。</p>
+          </div>
+          <div class="border border-blue-200 rounded-lg p-4">
+            <h4 class="font-bold text-blue-700">4. 情绪触发词 — 离转化不确定，但共鸣强</h4>
+            <p class="text-sm mt-1">搜索量不一定大，但搜的人情绪浓度极高。</p>
+            <p class="text-sm text-brand/60 mt-2 italic">"save family stories before it's too late" · "preserve memories before parents are gone"</p>
+            <p class="text-sm mt-2">如果你的内容能在这个时刻接住他，转化率可能比前面几类都高。</p>
+          </div>
+        </div>
+
+        <div class="bg-accent/5 rounded-lg p-4">
+          <p class="font-bold text-accent">为什么分类有用？</p>
+          <p class="text-sm mt-1">因为它直接决定了后面两层怎么做：不同类型的词需要不同类型的页面去接（→ 页面层），页面上写的内容逻辑也完全不同（→ 内容层）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第 3 层：页面层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">3</span>
+          <h2 class="text-xl font-bold">页面层 — 不同的词用什么页面来接？</h2>
+        </div>
+
+        <p class="mb-4"><strong>核心逻辑：搜索意图决定页面类型，不是反过来。</strong> 不是"我有个博客，所有词都用博客写"。</p>
+
+        <h3 class="font-bold mb-4">PostMem 需要的 5 种页面</h3>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-brand/5">
+                <th class="text-left p-3 border-b">页面类型</th>
+                <th class="text-left p-3 border-b">接什么词</th>
+                <th class="text-left p-3 border-b">URL 示例</th>
+                <th class="text-left p-3 border-b">核心任务</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="p-3 font-medium">对比页</td>
+                <td class="p-3">竞品拦截词</td>
+                <td class="p-3 font-mono text-xs">/storyworth-alternative</td>
+                <td class="p-3">对比表 + 事实 + CTA。决策工具，不是博客。</td>
+              </tr>
+              <tr class="border-b bg-brand/3">
+                <td class="p-3 font-medium">功能页</td>
+                <td class="p-3">品类定义词</td>
+                <td class="p-3 font-mono text-xs">/photo-to-story-ai</td>
+                <td class="p-3">定义品类 + 展示能力。能力入口，不是品牌入口。</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 font-medium">支柱页</td>
+                <td class="p-3">问题感知词</td>
+                <td class="p-3 font-mono text-xs">/blog/what-to-do-with...</td>
+                <td class="p-3">共情 → 列路径 → 自然引出 PostMem。话题权威页。</td>
+              </tr>
+              <tr class="border-b bg-brand/3">
+                <td class="p-3 font-medium">首页</td>
+                <td class="p-3">品牌词</td>
+                <td class="p-3 font-mono text-xs">/</td>
+                <td class="p-3">枢纽页，通过内链把权重分给其他页面。</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 font-medium">FAQ / Use Case</td>
+                <td class="p-3">长尾词+情绪词</td>
+                <td class="p-3 font-mono text-xs">/use-cases/...</td>
+                <td class="p-3">吃长尾流量 + GEO 弹药（FAQ Schema）。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-bold mb-3">5 种页面之间的关系</h3>
+        <div class="bg-brand/5 rounded-lg p-4 mb-4 font-mono text-sm text-center whitespace-pre">            首页（权重枢纽）
+           / | \
+      功能页  对比页  支柱页
+                      |
+                  FAQ / Use Case 页</div>
+
+        <div class="bg-red-50 rounded-lg p-4 mt-4">
+          <p class="font-bold text-red-800">最容易犯的错</p>
+          <ul class="text-sm mt-2 space-y-1 text-red-900">
+            <li><strong>一个页面服务两种意图。</strong> 在对比页里加教育内容——搜 "StoryWorth alternative" 的人不需要教育。</li>
+            <li><strong>一种意图拆太多页面。</strong> "StoryWorth alternative" 和 "StoryWorth vs Remento" 各写一篇——自己抢自己排名（关键词蚕食）。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第 4 层：内容层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">4</span>
+          <h2 class="text-xl font-bold">内容层 — 页面上具体写什么？</h2>
+        </div>
+
+        <p class="mb-4">核心判断：这个页面的读者处于什么心理状态，他需要你说什么才会往下走。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <h4 class="font-bold text-blue-800">转化型内容</h4>
+            <p class="text-xs text-blue-600 mb-2">"帮用户做决定"</p>
+            <p class="text-sm">出现在：对比页、功能页</p>
+            <p class="text-sm mt-2">读者心态：我在选方案。</p>
+            <p class="text-sm mt-2">写：对比表、差异化卖点、消除顾虑、明确 CTA。</p>
+            <p class="text-sm mt-2 text-blue-600">不写：为什么家族故事重要。他已经知道了。</p>
+          </div>
+          <div class="bg-green-50 rounded-lg p-4">
+            <h4 class="font-bold text-green-800">教育型内容</h4>
+            <p class="text-xs text-green-600 mb-2">"帮用户理解问题"</p>
+            <p class="text-sm">出现在：支柱页、博客</p>
+            <p class="text-sm mt-2">读者心态：我有困扰但不知道怎么办。</p>
+            <p class="text-sm mt-2">写：共情问题、列路径、自然引出 PostMem。</p>
+            <p class="text-sm mt-2 text-green-600">不写：硬推产品。越卖越跑。</p>
+          </div>
+          <div class="bg-purple-50 rounded-lg p-4">
+            <h4 class="font-bold text-purple-800">证据型内容</h4>
+            <p class="text-xs text-purple-600 mb-2">"让内容有说服力"</p>
+            <p class="text-sm">嵌在前两种内容里的弹药</p>
+            <p class="text-sm mt-2">包括：用户研究数据、学术理论、竞品数据。</p>
+            <p class="text-sm mt-2">同时服务 SEO（权重）和 GEO（AI 引用）。</p>
+          </div>
+        </div>
+
+        <div class="bg-accent/5 rounded-lg p-4">
+          <p class="font-bold text-accent">一句话记住内容层</p>
+          <p class="text-sm mt-1">对比页写事实帮他选，支柱页写共情帮他懂，所有页面用数据撑可信度。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第 5 层：技术层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">5</span>
+          <h2 class="text-xl font-bold">技术层 — 搜索引擎能不能读懂你的页面？</h2>
+        </div>
+
+        <p class="mb-4">前面 4 层你做了目标、选了词、建了页面、写了内容。技术层解决最后一公里：你写得再好，搜索引擎读不懂就白写。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="border rounded-lg p-4">
+            <h4 class="font-bold mb-2">让搜索引擎能"来"</h4>
+            <ul class="text-sm space-y-1">
+              <li>页面能被抓取（没被 robots.txt 挡掉）</li>
+              <li>有 sitemap 告诉 Google "我有哪些页面"</li>
+              <li>加载速度够快（慢了降权+跳出）</li>
+              <li>移动端正常显示（移动优先索引）</li>
+            </ul>
+          </div>
+          <div class="border rounded-lg p-4">
+            <h4 class="font-bold mb-2">让搜索引擎能"读懂"</h4>
+            <ul class="text-sm space-y-1">
+              <li><strong>URL 结构</strong> — <code>/storyworth-alternative</code> ✓</li>
+              <li><strong>H1/H2/H3 层级</strong> — 内容逻辑关系</li>
+              <li><strong>Meta 标签</strong> — 搜索结果展示</li>
+              <li><strong>内链</strong> — 页面间关系和权重传递</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="font-bold mb-3">PostMem 需要的 3 种 Schema</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-brand/5">
+                <th class="text-left p-3 border-b">Schema 类型</th>
+                <th class="text-left p-3 border-b">加在哪</th>
+                <th class="text-left p-3 border-b">告诉搜索引擎什么</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b"><td class="p-3 font-medium">Product</td><td class="p-3">功能页</td><td class="p-3">"这是一个产品，有这些特性"</td></tr>
+              <tr class="border-b bg-brand/3"><td class="p-3 font-medium">FAQ</td><td class="p-3">对比页、支柱页底部</td><td class="p-3">"这里有问答，可以直接展示在搜索结果里"</td></tr>
+              <tr class="border-b"><td class="p-3 font-medium">HowTo</td><td class="p-3">教程类博客</td><td class="p-3">"这是一个步骤指南，可以展示步骤摘要"</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-sm text-brand/60 italic mt-4">技术层不创造内容价值，但它决定你的内容价值能不能被搜索引擎正确识别和展示。Schema 对 GEO 尤其重要——AI 搜索抓结构化数据比抓自然文本更高效。</p>
+      </div>
+    </section>
+
+    <!-- 第 6 层：分发层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">6</span>
+          <h2 class="text-xl font-bold">分发层 — 怎么让站外世界知道你存在？</h2>
+        </div>
+
+        <p class="mb-4">前 5 层都是站内的事。分发层解决一个现实问题：Google 不只看你写得好不好，还要看别人怎么评价你。这就像申请学校——自己的简历写得再好，还需要推荐信。</p>
+
+        <h3 class="font-bold mb-4">PostMem 能做的 3 件事</h3>
+
+        <div class="space-y-4">
+          <div class="border rounded-lg p-4">
+            <h4 class="font-bold">1. Reddit 渗透 — 最快见效</h4>
+            <p class="text-sm mt-1">很多 PostMem 相关的关键词，Reddit 帖子本身就排在 Google 前几名（"StoryWorth alternative" 排第一的就是 Reddit）。Google 近两年明确加大了 Reddit 内容的排名权重。AI 搜索也大量引用 Reddit 讨论。</p>
+            <p class="text-sm mt-2 text-brand/60">效果是双重的：直接获得 Reddit 曝光 + 那个帖子在 Google 里也排名。</p>
+          </div>
+          <div class="border rounded-lg p-4">
+            <h4 class="font-bold">2. 第三方榜单入驻 — 借别人的权威</h4>
+            <p class="text-sm mt-1">搜 "best family story apps" 排在前面的是第三方 listicle 文章。你要做的不是跟它们竞争，而是让 PostMem 出现在这些文章里。</p>
+          </div>
+          <div class="border rounded-lg p-4">
+            <h4 class="font-bold">3. 可被引用的资产 — 让别人主动提你</h4>
+            <p class="text-sm mt-1">PostMem 有别人没有的东西：原创用户研究数据（69%/84.2%）、学术理论框架、结构化竞品对比表。别人写文章需要引用数据时，自然会链到你。</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-brand/60 italic mt-4">站内内容决定你值不值得排上去，站外信号决定 Google 信不信你值得排上去。</p>
+      </div>
+    </section>
+
+    <!-- 第 7 层：数据层 -->
+    <section class="mb-10">
+      <div class="layer-card bg-white rounded-r-2xl p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center">7</span>
+          <h2 class="text-xl font-bold">数据层 — 整个系统哪里出了问题？</h2>
+        </div>
+
+        <p class="mb-4">数据层只干一件事：告诉你前 6 层哪里出了问题。SEO 是一个漏斗，数据层就是在漏斗的每个环节装一个计量表。</p>
+
+        <div class="bg-brand/5 rounded-lg p-6 font-mono text-sm space-y-2">
+          <p>被搜索引擎收录了吗 → 没有 → <span class="text-red-600 font-bold">技术层有问题</span></p>
+          <p class="pl-8">↓</p>
+          <p>被用户看到了吗（曝光）→ 没有 → <span class="text-red-600 font-bold">关键词层或页面层有问题</span></p>
+          <p class="pl-8">↓</p>
+          <p>用户点了吗（点击）→ 没有 → <span class="text-red-600 font-bold">标题和描述不吸引人</span></p>
+          <p class="pl-8">↓</p>
+          <p>用户留下了吗（停留）→ 没有 → <span class="text-red-600 font-bold">内容层没接住意图</span></p>
+          <p class="pl-8">↓</p>
+          <p>用户注册了吗（转化）→ 没有 → <span class="text-red-600 font-bold">CTA 或产品本身的问题</span></p>
+          <p class="pl-8">↓</p>
+          <p>来的是对的人吗 → 不是 → <span class="text-red-600 font-bold">目标层一开始就偏了</span></p>
+        </div>
+
+        <p class="text-sm text-brand/60 italic mt-4">数据层不是为了汇报 SEO，而是用结果反推前 6 层哪里该修、哪里该扩展。</p>
+      </div>
+    </section>
+
+    <!-- 闭环总结 -->
+    <section class="mb-10">
+      <div class="bg-brand text-warm rounded-2xl p-8">
+        <h2 class="text-xl font-bold mb-4">闭环总结</h2>
+        <p class="mb-4 text-warm/80">PostMem 的 SEO 不是运营博客，而是一个完整的搜索获客系统。博客只是内容层里的一种形式。</p>
+        <ol class="space-y-2 text-sm">
+          <li><strong class="text-accent">1. 目标层</strong> — 搜索获客 + AI 占位 + 品类定义</li>
+          <li><strong class="text-accent">2. 关键词层</strong> — 竞品拦截 / 品类定义 / 问题感知 / 情绪触发</li>
+          <li><strong class="text-accent">3. 页面层</strong> — 对比页 / 功能页 / 支柱页 / 首页 / FAQ 页</li>
+          <li><strong class="text-accent">4. 内容层</strong> — 转化型 / 教育型 / 证据型</li>
+          <li><strong class="text-accent">5. 技术层</strong> — URL + 标题 + Meta + 内链 + Schema</li>
+          <li><strong class="text-accent">6. 分发层</strong> — Reddit + 榜单 + 可引用资产</li>
+          <li><strong class="text-accent">7. 数据层</strong> — 漏斗诊断，反推修正</li>
+        </ol>
+        <p class="mt-4 text-warm/60 text-sm italic">这是一个闭环。数据层的结论会反推你回到前面任何一层去修正。先记住框架，再在实操中填血肉。</p>
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="index.html" class="inline-block bg-accent text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-accent/90 transition">← 返回内容总览</a>
+    </div>
+
+    <p class="text-center text-brand/40 text-xs mt-12">&copy; 2026 PostMem · 最后更新：March 2026</p>
+  </main>
+</body>
+</html>

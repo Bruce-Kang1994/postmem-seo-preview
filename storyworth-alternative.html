@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryWorth Alternative — Turn Photos Into Stories | PostMem</title>
+  <meta name="description" content="Looking for a StoryWorth alternative? PostMem turns your scattered family photos into stories with AI — no writing, no weekly prompts, no homework.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2a2018',
+            warm: '#f5f0eb',
+            accent: '#c4834c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Georgia', serif; }
+    h1, h2, h3, h4 { font-family: system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PostMem",
+    "url": "https://www.postmem.com",
+    "description": "AI-powered family photo story preservation."
+  }
+  </script>
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is PostMem really easier than StoryWorth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most families, yes — because the hardest part is already done. You already have the photos. StoryWorth requires someone to write answers to 52 questions over a year; PostMem asks you to upload photos (once) and respond to specific questions about what's in them. That said, 'easier' depends on your family. If your parent is a natural writer who enjoys prompts, StoryWorth's format may feel effortless to them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my family member isn't tech-savvy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PostMem is designed for people aged 40-65 who are comfortable with basic smartphone use — taking photos, browsing Facebook, sending texts. If your parent can use a phone camera, they can use PostMem. However, if your family member avoids smartphones entirely, PostMem isn't the right tool — you'd need to do the uploading on their behalf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I still make a printed book with PostMem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PostMem generates digital stories first, and you can compile them into a printed book whenever you're ready. The difference is you're not locked into a one-year timeline — print after 3 stories or 300. That said, StoryWorth's book printing is more mature and polished than ours at this stage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my photos and stories private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your family's memories are yours. PostMem uses encryption for storage and transfer. We do not use your photos or stories to train AI models. You control who sees what, and you can export or delete everything at any time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is PostMem different from Google Photos or Apple Photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Photos and Apple Photos store and organize your photos by date and face. They don't connect photos to stories, ask you what happened, or help you preserve the context behind the moments. PostMem turns '47,000 files in a folder' into 'Grandma's life, told through the photos she lived.'"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-warm text-brand">
+
+  <!-- Nav -->
+  <nav class="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold tracking-tight">PostMem</a>
+    <a href="#cta" class="bg-accent text-white px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition">Get Started →</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="max-w-3xl mx-auto px-6 pt-16 pb-12 text-center">
+    <p class="text-accent text-sm font-medium uppercase tracking-wide mb-4">StoryWorth Alternative</p>
+    <p class="text-brand/50 text-xs mt-0 mb-4">StoryWorth 替代方案</p>
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-1">
+      Looking for a StoryWorth Alternative?<br>Start With Your Photos, Not a Blank Page.
+    </h1>
+    <p class="text-brand/50 text-lg mt-1 mb-6">在找 StoryWorth 的替代品？从你的照片开始，而不是一张白纸。</p>
+    <p class="text-lg text-brand/70 max-w-2xl mx-auto">
+      PostMem turns your scattered family photos into stories with AI — no writing, no weekly prompts, no homework.
+    </p>
+    <p class="text-brand/50 text-sm mt-1 max-w-2xl mx-auto">PostMem 用 AI 把你散落各处的家庭照片变成故事——不用写作，不用每周回答提示，不用做作业。</p>
+
+    <div class="bg-brand/5 border border-brand/20 rounded-xl p-5 my-6 max-w-2xl mx-auto text-left">
+      <p class="font-bold text-brand mb-2">📄 本文概要（中文）</p>
+      <p class="text-sm text-brand/80">本页是一个竞品对比落地页（不是博客），目标关键词为「storyworth alternative / storyworth vs postmem」。面向已知 StoryWorth 但不满意或在犹豫的用户。核心策略：先描述 StoryWorth 周写作提示的真实痛点（完成率低、变成作业），再用三方对比表展示 PostMem 的差异（照片起步、无需写作、持续价值），最后用三步流程降低使用门槛。转化路径：痛点共鸣 → 评测方法 → 对比表 → 谁该选 SW → 谁不该选 PM → 差异说明 → 流程 → FAQ → CTA。</p>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6">
+
+    <!-- Pain Point -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">The Problem With Weekly Writing Prompts</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">每周写作提示的问题</p>
+      <p class="mb-1 text-brand/80 leading-relaxed">StoryWorth is a beautiful idea: answer one question a week, and after a year, you get a printed book of family stories.</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">StoryWorth 是一个很美好的想法：每周回答一个问题，一年后你会收到一本印刷好的家庭故事书。</p>
+      <p class="mb-1 text-brand/80 leading-relaxed">But here's what actually happens for many families:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">但很多家庭实际发生的情况是这样的：</p>
+      <ul class="space-y-3 mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>The first few weeks go great.</strong> Then life gets busy.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6">前几周一切顺利。然后生活变忙了。</li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>The weekly prompts start feeling like homework.</strong> In Reddit communities like r/RedditForGrownups, r/Gifts, and r/AgingParents, "homework" is the single most common word users reach for when describing the StoryWorth experience. One r/Gifts commenter wrote: "My mom answered 3 questions and then stopped. I felt guilty nagging her."</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6">每周的写作提示开始变得像作业一样。在 Reddit 的 r/RedditForGrownups、r/Gifts 和 r/AgingParents 社区中，"作业"是用户描述 StoryWorth 体验时最常用的词。一位 r/Gifts 用户写道："我妈妈回答了 3 个问题然后就不写了。催她让我觉得很内疚。"</li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>A year later, the book has gaps.</strong> Some chapters are rich. Others are one sentence. Some are blank.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6">一年后，这本书到处是空白。有些章节很丰富，有些只有一句话，有些完全空着。</li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>You paid $99 for a book that's incomplete.</strong> Multiple threads in r/StoryWorth and r/Gifts cite low completion as the top frustration. Trustpilot reviews echo the pattern — users love the concept but struggle with the execution.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6">你花了 99 美元，得到一本不完整的书。r/StoryWorth 和 r/Gifts 中多个帖子将低完成率列为最大的不满。Trustpilot 的评价也反映了同样的模式——用户喜欢这个概念，但执行起来困难重重。</li>
+      </ul>
+      <p class="text-brand/80 leading-relaxed">It's not anyone's fault. Writing is hard. Sitting down every week to put memories into words is a commitment that most people — especially older parents — find exhausting.</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">这不是任何人的错。写作本身就很难。每周坐下来把记忆变成文字，是一种大多数人——尤其是年长的父母——会觉得精疲力尽的承诺。</p>
+      <p class="mt-4 text-lg font-medium text-brand">What if there was a way to preserve family stories that didn't require anyone to write?</p>
+      <p class="text-brand/50 text-sm mt-1">如果有一种方法可以保存家庭故事，而不需要任何人写字呢？</p>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">痛点描述段：客观描述 StoryWorth 的真实使用体验——前几周很好 → 周提示变成作业 → Reddit 上"homework"是最常见描述词 → 一年后书不完整。新增了具体的 Reddit 引用（r/Gifts 用户真实评论）和多个社区来源。不是攻击竞品，而是用真实用户反馈印证问题。最后引出关键问题："如果不需要任何人写字呢？"</p>
+      </div>
+    </section>
+
+    <!-- How We Compared -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">How We Compared</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">我们的评测方法</p>
+      <p class="mb-4 text-brand/80 leading-relaxed">We compared StoryWorth, Remento, and PostMem across pricing, workflow, output, and user experience. Here's how:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">我们从定价、工作流程、产出和用户体验四个维度对 StoryWorth、Remento 和 PostMem 进行了对比。以下是我们的方法：</p>
+      <ul class="space-y-3 mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>Pricing:</strong> Pulled from each company's official website. Last verified March 2026.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6"><strong>定价：</strong>来自各公司官方网站。最后验证时间 2026 年 3 月。</li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>Features and workflow:</strong> Based on hands-on testing of all three products.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6"><strong>功能和工作流程：</strong>基于对三款产品的实际测试。</li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>User feedback:</strong> Sourced from Reddit (r/RedditForGrownups, r/Gifts, r/GiftIdeas, r/AgingParents, r/Genealogy), Trustpilot, and App Store reviews, 2023-2025.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6"><strong>用户反馈：</strong>来源于 Reddit（r/RedditForGrownups、r/Gifts、r/GiftIdeas、r/AgingParents、r/Genealogy）、Trustpilot 和 App Store 评价，2023-2025 年。</li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent mt-1">•</span>
+          <span class="text-brand/80"><strong>First-party research:</strong> PostMem conducted semi-structured interviews with 19 memory keepers (ages 38-67) in January-March 2025.</span>
+        </li>
+        <li class="text-brand/50 text-sm list-none ml-6"><strong>第一方研究：</strong>PostMem 于 2025 年 1-3 月对 19 位记忆守护者（38-67 岁）进行了半结构化访谈。</li>
+      </ul>
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <p class="text-brand/80 leading-relaxed"><strong>Disclosure:</strong> We built PostMem. We've done our best to represent each product fairly, but you should know where we stand. We encourage you to try all three if you're deciding.</p>
+        <p class="text-brand/50 text-sm mt-1"><strong>声明：</strong>PostMem 是我们做的。我们已尽力公平地呈现每款产品，但你应该知道我们的立场。如果你在做决定，我们鼓励你三款都试试。</p>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">新增评测方法论段落——透明展示数据来源（官网定价、实际测试、Reddit/Trustpilot 用户反馈、第一方访谈研究），增强可信度。Disclosure 直接告诉用户"我们做的 PostMem"，比假装中立更诚实。</p>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">StoryWorth vs Remento vs PostMem</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">StoryWorth vs Remento vs PostMem 对比</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-brand/20">
+              <th class="text-left py-3 pr-4 font-semibold">Feature<br><span class="text-brand/50 text-sm font-normal">功能</span></th>
+              <th class="text-left py-3 px-4 font-semibold">StoryWorth</th>
+              <th class="text-left py-3 px-4 font-semibold">Remento</th>
+              <th class="text-left py-3 px-4 font-semibold text-accent">PostMem</th>
+            </tr>
+          </thead>
+          <tbody class="text-brand/80">
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">How it works<br><span class="text-brand/50 text-sm font-normal">工作方式</span></td>
+              <td class="py-3 px-4">Weekly text prompts; you write answers<br><span class="text-brand/50 text-sm">每周文字提示；你写回答</span></td>
+              <td class="py-3 px-4">Voice prompts; you record answers<br><span class="text-brand/50 text-sm">语音提示；你录音回答</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Upload photos; AI identifies people and moments, asks you about them, organizes your answers into stories<br><span class="text-brand/50 text-sm font-normal">上传照片；AI 识别人物和时刻，向你提问，把你的回答整理成故事</span></td>
+            </tr>
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">Input required<br><span class="text-brand/50 text-sm font-normal">需要的输入</span></td>
+              <td class="py-3 px-4">Writing (typing)<br><span class="text-brand/50 text-sm">写作（打字）</span></td>
+              <td class="py-3 px-4">Speaking (recording)<br><span class="text-brand/50 text-sm">说话（录音）</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Photos (uploading) + short voice notes or text<br><span class="text-brand/50 text-sm font-normal">照片（上传）+ 简短语音或文字</span></td>
+            </tr>
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">Time commitment<br><span class="text-brand/50 text-sm font-normal">时间投入</span></td>
+              <td class="py-3 px-4">52 weeks of weekly writing<br><span class="text-brand/50 text-sm">每周写作，持续 52 周</span></td>
+              <td class="py-3 px-4">Multiple recording sessions<br><span class="text-brand/50 text-sm">多次录音</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Upload once; stories appear in minutes<br><span class="text-brand/50 text-sm font-normal">上传一次；故事几分钟内出现</span></td>
+            </tr>
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">Who does the work<br><span class="text-brand/50 text-sm font-normal">谁做主要工作</span></td>
+              <td class="py-3 px-4">The person being interviewed<br><span class="text-brand/50 text-sm">被采访者</span></td>
+              <td class="py-3 px-4">The person being interviewed<br><span class="text-brand/50 text-sm">被采访者</span></td>
+              <td class="py-3 px-4 text-brand font-medium">AI identifies and asks; you answer; AI organizes<br><span class="text-brand/50 text-sm font-normal">AI 识别和提问；你回答；AI 整理</span></td>
+            </tr>
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">Typical completion experience<br><span class="text-brand/50 text-sm font-normal">典型完成体验</span></td>
+              <td class="py-3 px-4">Reddit users frequently report 5-15 out of 52 questions answered<br><span class="text-brand/50 text-sm">Reddit 用户常报告 52 个问题中只回答了 5-15 个</span></td>
+              <td class="py-3 px-4">Higher than StoryWorth — speaking is easier than writing<br><span class="text-brand/50 text-sm">比 StoryWorth 高——说比写容易</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Photo upload is the main step; story generation is ongoing and low-effort<br><span class="text-brand/50 text-sm font-normal">照片上传是主要步骤；故事生成持续且省力</span></td>
+            </tr>
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">Output<br><span class="text-brand/50 text-sm font-normal">产出</span></td>
+              <td class="py-3 px-4">Printed book after 1 year<br><span class="text-brand/50 text-sm">一年后的印刷书</span></td>
+              <td class="py-3 px-4">Printed book + QR code audio<br><span class="text-brand/50 text-sm">印刷书 + 二维码音频</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Digital stories + shareable links + optional print<br><span class="text-brand/50 text-sm font-normal">数字故事 + 分享链接 + 可选印刷</span></td>
+            </tr>
+            <tr class="border-b border-brand/10">
+              <td class="py-3 pr-4 font-medium">Works with existing photos<br><span class="text-brand/50 text-sm font-normal">利用现有照片</span></td>
+              <td class="py-3 px-4">No — starts from scratch<br><span class="text-brand/50 text-sm">否——从头开始</span></td>
+              <td class="py-3 px-4">No — requires new recordings<br><span class="text-brand/50 text-sm">否——需要新的录音</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Yes — built around your existing photo library<br><span class="text-brand/50 text-sm font-normal">是——围绕你现有的照片库建立</span></td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-medium">Pricing<br><span class="text-brand/50 text-sm font-normal">定价</span></td>
+              <td class="py-3 px-4">$99/year<br><span class="text-brand/50 text-sm">99 美元/年</span></td>
+              <td class="py-3 px-4">$99/year<br><span class="text-brand/50 text-sm">99 美元/年</span></td>
+              <td class="py-3 px-4 text-brand font-medium">Starting at $19/month<br><span class="text-brand/50 text-sm font-normal">19 美元/月起</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-brand/60 text-xs mt-4 italic">*Pricing last verified March 2026. Completion observations are based on user reviews across Reddit, Trustpilot, and App Store — not a controlled study. Your family's experience may vary.*</p>
+      <p class="text-brand/50 text-xs mt-1 italic">*定价最后验证时间 2026 年 3 月。完成体验的观察基于 Reddit、Trustpilot 和 App Store 用户评价——并非受控研究。你的家庭体验可能有所不同。*</p>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">扩展后的三方对比表（StoryWorth vs Remento vs PostMem），从 6 个维度扩展到 8 个维度，新增"谁做主要工作"和"典型完成体验"两行。搜"StoryWorth alternative"的用户处于比较阶段，对比表是他们最想看的格式。</p>
+      </div>
+    </section>
+
+    <!-- Who Should Choose StoryWorth -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">Who Should Still Choose StoryWorth</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">谁应该继续选择 StoryWorth</p>
+      <p class="text-brand/80 leading-relaxed mb-4">StoryWorth is genuinely the better choice if your family fits these scenarios:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">如果你的家庭符合以下情况，StoryWorth 确实是更好的选择：</p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>Your parent enjoys writing.</strong> Some people light up when given a prompt. If your mom keeps a journal or writes long Facebook posts, StoryWorth's weekly format may feel natural to her — not like homework.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你的父母喜欢写作。</strong>有些人看到写作提示就来劲。如果你妈妈喜欢记日记或在 Facebook 上写长文，StoryWorth 的每周格式对她来说可能很自然——不像作业。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>You want a physical book as the primary output.</strong> StoryWorth's printed hardcover book is polished and well-designed. It's a tangible object you can put on a shelf and hand to someone. If the book is the point, StoryWorth does this well.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你的首要目标是一本实体书。</strong>StoryWorth 的精装印刷书制作精良。它是一件可以放在书架上、递给别人的实物。如果书本身就是目的，StoryWorth 在这方面做得很好。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>You want an established brand with a track record.</strong> StoryWorth has been operating since 2015 and has hundreds of thousands of completed books. PostMem is newer. If platform maturity matters to you, that's a legitimate factor.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你看重有口碑的成熟品牌。</strong>StoryWorth 自 2015 年运营至今，已完成数十万本书。PostMem 更新。如果平台成熟度对你很重要，这是一个合理的考量因素。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>The 52-week cadence appeals to your family.</strong> Some families genuinely use the weekly rhythm as a bonding ritual — a reason to call mom on Sunday. If that structure sounds motivating rather than burdensome, lean into it.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>52 周的节奏对你的家庭有吸引力。</strong>有些家庭确实把每周的节奏当作增进感情的仪式——周日给妈妈打电话的理由。如果这种结构听起来更像是动力而非负担，那就选它。</p>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">新增"谁该选 StoryWorth"段落——真诚地推荐竞品的适用场景。这看似反直觉，但效果更好：1) 读者感受到诚实，信任度提升；2) 帮读者做出正确选择会产生好感；3) 如果读者不属于这些情况，排除法让他们更确定 PostMem 是对的。</p>
+      </div>
+    </section>
+
+    <!-- Who Should NOT Choose PostMem -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">Who Should NOT Choose PostMem</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">谁不应该选择 PostMem</p>
+      <p class="text-brand/80 leading-relaxed mb-4">We're not the right fit for everyone. Be honest with yourself about these:</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4">我们不适合所有人。请对自己诚实地考虑以下情况：</p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>You don't have digital photos.</strong> If your family photos are physical prints in boxes and you aren't willing to scan them, PostMem can't help yet. We need digital files to work with.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你没有数字照片。</strong>如果你的家庭照片全是箱子里的冲印照，而你不打算扫描它们，PostMem 目前帮不了你。我们需要数字文件才能工作。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>You want a structured weekly ritual.</strong> PostMem is asynchronous and self-paced. If you want the forced accountability of a weekly prompt, that's StoryWorth's strength, not ours.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你想要结构化的每周仪式。</strong>PostMem 是异步的、按自己节奏进行的。如果你想要每周提示的强制约束力，那是 StoryWorth 的优势，不是我们的。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>You want a mature, proven platform.</strong> PostMem is early-stage. We're iterating fast, but we don't have years of track record. If you need a company that's been doing this since 2015, choose StoryWorth.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你要一个成熟的、经过验证的平台。</strong>PostMem 还处于早期阶段。我们迭代很快，但没有多年的历史记录。如果你需要一家从 2015 年就开始做这件事的公司，选 StoryWorth。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>A printed book is your primary goal.</strong> PostMem is digital-first. You can print, but our core experience is shareable digital stories. If you're buying this as a book gift, StoryWorth's hardcover is purpose-built for that.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>印刷书是你的首要目标。</strong>PostMem 是数字优先的。你可以打印，但我们的核心体验是可分享的数字故事。如果你是把它当礼物书来买的，StoryWorth 的精装书就是为此而生的。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-brand/80 leading-relaxed"><strong>Your family member has no smartphone or computer access.</strong> PostMem requires uploading photos and reviewing stories on a device. It's designed for people comfortable with basic smartphone use, not for someone who avoids screens entirely.</p>
+          <p class="text-brand/50 text-sm mt-1"><strong>你的家人没有智能手机或电脑。</strong>PostMem 需要在设备上上传照片和查看故事。它是为习惯基本智能手机使用的人设计的，不适合完全不碰屏幕的人。</p>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">新增"谁不该选 PostMem"段落——主动告诉用户我们的局限性。这是最强的信任建设动作：一家公司愿意说"我们不适合你"意味着当它说"我们适合你"的时候更可信。5 个不适合场景覆盖：没有数字照片、要结构化周提示、要成熟平台、要印刷书、不用智能手机。</p>
+      </div>
+    </section>
+
+    <!-- Why Different -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">Why PostMem Is Different</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-8">为什么 PostMem 不一样</p>
+
+      <div class="space-y-10">
+        <div>
+          <h3 class="text-xl font-bold mb-1">1. Your photos already contain the stories.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-3">1. 你的照片里已经藏着故事。</p>
+          <p class="text-brand/80 leading-relaxed mb-3">You have 20,000, 50,000, maybe 100,000 family photos scattered across your phone, old hard drives, and cloud accounts. Each photo is a frozen moment.</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3">你有 2 万、5 万，甚至 10 万张家庭照片，散落在手机、旧硬盘和云账号里。每张照片都是一个定格的瞬间。</p>
+          <div class="bg-white rounded-xl p-6 shadow-sm my-4">
+            <p class="text-brand/80 leading-relaxed text-sm">Here's what that looks like in practice: you upload a folder of photos from the 2000s. PostMem groups 14 photos from what it identifies as a beach trip — same faces, same location, dated July 2003. It asks: "Who are these people?" You type "Mom, Aunt Linda, and me — Outer Banks." It asks: "What do you remember about this trip?" You leave a 40-second voice note about how Aunt Linda got stung by a jellyfish and laughed about it for years. PostMem organizes that into a written story with the photos attached.</p>
+            <p class="text-brand/50 text-sm mt-2">实际操作是这样的：你上传了一个 2000 年代的照片文件夹。PostMem 把 14 张照片归为一组——它识别出这是一次海滩旅行——相同的面孔、相同的地点、日期是 2003 年 7 月。它问："这些人是谁？"你输入"妈妈、Linda 阿姨和我——Outer Banks。"它问："你对这次旅行有什么记忆？"你留了一段 40 秒的语音说 Linda 阿姨被水母蛰了然后笑了好多年。PostMem 把这些整理成一篇带照片的故事。</p>
+          </div>
+          <p class="text-brand/80 leading-relaxed">You didn't start from a blank page. You started from a photo you'd forgotten you had.</p>
+          <p class="text-brand/50 text-sm mt-1">你不是从白纸开始的。你是从一张你都忘了自己有的照片开始的。</p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-1">2. No one has to sit down and write.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-3">2. 没有人需要坐下来写字。</p>
+          <p class="text-brand/80 leading-relaxed mb-3">StoryWorth asks your mom to be a writer. Remento asks her to be a speaker in a recording session. PostMem asks her to look at a photo and say, "Oh, that was the summer we drove to Lake Michigan."</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3">StoryWorth 要求你妈妈当一个作家。Remento 要求她在录音环节当一个讲述者。PostMem 只是让她看一张照片，然后说："哦，那是我们开车去密歇根湖的那个夏天。"</p>
+          <p class="text-brand/80 leading-relaxed">That's it. A 30-second voice note. AI turns it into a paragraph. Your mom reviews it, maybe corrects a name or adds a detail, and the story is preserved. In our user research (n=19, ages 38-67, semi-structured interviews, 2025), participants consistently said that looking at a specific photo produced richer, more detailed memories than answering an abstract prompt like "Tell me about your childhood."</p>
+          <p class="text-brand/50 text-sm mt-1">就这样。30 秒的语音备忘录。AI 把它变成一段文字。你妈妈看一下，也许纠正一个名字或补充一个细节，故事就保存下来了。在我们的用户研究中（n=19，38-67 岁，半结构化访谈，2025 年），参与者一致表示，看着一张具体的照片能产生比回答"说说你的童年"这种抽象提示更丰富、更详细的记忆。</p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-1">3. It keeps working after the first story.</h3>
+          <p class="text-brand/50 text-sm mt-1 mb-3">3. 做完第一个故事后，它继续工作。</p>
+          <p class="text-brand/80 leading-relaxed">With StoryWorth, the product experience ends when the book is printed. With PostMem, your photo library is a living archive. As you upload more photos over time, AI groups them into new moments you haven't written about yet. Your sister adds context to a photo you uploaded. Your cousin identifies someone you couldn't place.</p>
+          <p class="text-brand/50 text-sm mt-1 mb-3">用 StoryWorth，书印完了产品体验就结束了。用 PostMem，你的照片库是一个活的档案。随着你不断上传更多照片，AI 会把它们分组成你尚未描述的新时刻。你姐姐为你上传的照片添加背景。你表亲识别出你认不出的人。</p>
+          <p class="text-brand/80 leading-relaxed">You're not subscribing to a one-year writing project. You're building a family memory system that grows.</p>
+          <p class="text-brand/50 text-sm mt-1">你不是在订阅一个为期一年的写作项目。你是在构建一个不断成长的家庭记忆系统。</p>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">三个差异点，每个回应 StoryWorth 的一个具体弱点。新增具体操作示例（Outer Banks 海滩旅行故事的完整流程演示）和用户研究引用（n=19，照片比抽象提示产生更丰富记忆）。第三点新增了家庭协作的具体场景（姐姐添加背景、表亲识别人物）。</p>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">How PostMem Works</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-8">PostMem 怎么用</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="text-3xl font-bold text-accent mb-3">1</div>
+          <h3 class="font-bold mb-1">Upload Your Photos</h3>
+          <p class="text-brand/50 text-xs mt-1 mb-2">上传你的照片</p>
+          <p class="text-sm text-brand/70">Connect your phone camera roll, iCloud, or Google Photos — or upload from a hard drive. PostMem's AI removes duplicates and near-duplicates, then identifies faces across your collection.</p>
+          <p class="text-brand/50 text-xs mt-1 mb-2">连接手机相册、iCloud 或 Google Photos——或从硬盘上传。PostMem 的 AI 去除重复和近似重复的照片，然后在你的整个收藏中识别人脸。</p>
+          <p class="text-sm text-brand/70 mt-2"><strong>What you see:</strong> A timeline view of your photos, organized by date and grouped by event. Faces are clustered — "Person A appears in 847 photos" — and you assign names. The whole process takes about 10 minutes for a few thousand photos.</p>
+          <p class="text-brand/50 text-xs mt-1"><strong>你看到的：</strong>按日期排列、按事件分组的照片时间线。人脸被聚类——"人物 A 出现在 847 张照片中"——你为他们命名。几千张照片的整个过程大约需要 10 分钟。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="text-3xl font-bold text-accent mb-3">2</div>
+          <h3 class="font-bold mb-1">AI Groups Photos and Asks You About Them</h3>
+          <p class="text-brand/50 text-xs mt-1 mb-2">AI 分组照片并向你提问</p>
+          <p class="text-sm text-brand/70">PostMem groups related photos into moments — "Christmas 2003," "Mom's Garden," "Road Trip to Yellowstone." For each group, it identifies the people and setting, then asks you targeted questions.</p>
+          <p class="text-brand/50 text-xs mt-1 mb-2">PostMem 把相关照片分组成一个个时刻——"2003 年圣诞节"、"妈妈的花园"、"黄石公路旅行"。对每个组，它识别人物和场景，然后向你提出有针对性的问题。</p>
+          <p class="text-sm text-brand/70 mt-2"><strong>What you see:</strong> A card for each moment with its photos displayed. Below the photos, 2-3 specific questions. You tap to answer with text or a voice note. AI organizes your answers into a written narrative. A single story takes 3-5 minutes.</p>
+          <p class="text-brand/50 text-xs mt-1"><strong>你看到的：</strong>每个时刻一张卡片，展示相关照片。照片下方有 2-3 个具体问题。你点击用文字或语音回答。AI 把你的回答整理成书面叙述。完成一个故事只需 3-5 分钟。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="text-3xl font-bold text-accent mb-3">3</div>
+          <h3 class="font-bold mb-1">Share & Preserve</h3>
+          <p class="text-brand/50 text-xs mt-1 mb-2">分享与保存</p>
+          <p class="text-sm text-brand/70">Every story becomes a shareable link you can send to your family group chat, email, or social media. Stories are stored in your private archive. Print a book when you're ready — after 5 stories or 500.</p>
+          <p class="text-brand/50 text-xs mt-1 mb-2">每个故事都会变成一个可分享的链接，你可以发到家庭群聊、邮件或社交媒体。故事存储在你的私人档案中。准备好了就打印成书——5 个故事或 500 个故事都行。</p>
+          <p class="text-sm text-brand/70 mt-2"><strong>What you see:</strong> A story page with your photos and narrative text, formatted for reading. A "Share" button generates a link. A "Book" section lets you select which stories to compile.</p>
+          <p class="text-brand/50 text-xs mt-1"><strong>你看到的：</strong>一个包含你的照片和叙述文字的故事页面，排版适合阅读。"分享"按钮生成链接。"书籍"区域让你选择要汇编的故事。</p>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">三步流程展示 PostMem 具体怎么用。每一步现在都有"What you see"子段，用具体的界面描述让用户预期体验。强调低门槛：几千张照片 10 分钟处理完，单个故事 3-5 分钟。</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-1">Frequently Asked Questions</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-8">常见问题</p>
+      <div class="space-y-6">
+        <details class="group bg-white rounded-xl p-6 shadow-sm" open>
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+            Is PostMem really easier than StoryWorth?
+            <span class="text-accent group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="text-brand/50 text-sm mt-1 mb-2">PostMem 真的比 StoryWorth 更简单吗？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">For most families, yes — because the hardest part is already done. You already have the photos. StoryWorth requires someone to write answers to 52 questions over a year; PostMem asks you to upload photos (once) and respond to specific questions about what's in them. That said, "easier" depends on your family. If your parent is a natural writer who enjoys prompts, StoryWorth's format may feel effortless to them.</p>
+          <p class="text-brand/50 text-xs mt-1">对大多数家庭来说是的——因为最难的部分已经完成了。你已经有照片了。StoryWorth 需要人在一年里写完 52 个问题的答案；PostMem 要求你上传照片（一次），然后回答关于照片内容的具体问题。话说回来，"更简单"取决于你的家庭。如果你的父母是天生的写作爱好者，StoryWorth 的格式可能对他们来说毫不费力。</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+            What if my family member isn't tech-savvy?
+            <span class="text-accent group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="text-brand/50 text-sm mt-1 mb-2">如果家人不太懂技术怎么办？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">PostMem is designed for people aged 40-65 who are comfortable with basic smartphone use — taking photos, browsing Facebook, sending texts. If your parent can use a phone camera, they can use PostMem. The main input is photos they already have, not a new skill they have to learn. However, if your family member avoids smartphones entirely, PostMem isn't the right tool — you'd need to do the uploading on their behalf.</p>
+          <p class="text-brand/50 text-xs mt-1">PostMem 是为 40-65 岁、能基本使用智能手机（拍照、用 Facebook、发短信）的人设计的。如果你的父母会用手机拍照，他们就能用 PostMem。主要输入是他们已有的照片，不是需要学习的新技能。但如果家人完全不用智能手机，PostMem 不是合适的工具——你需要代替他们上传。</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+            Can I still make a printed book?
+            <span class="text-accent group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="text-brand/50 text-sm mt-1 mb-2">还能做成印刷书吗？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">Yes. PostMem generates digital stories first, and you can compile them into a printed book whenever you're ready. The difference is you're not locked into a one-year timeline — print after 3 stories or 300. That said, StoryWorth's book printing is more mature and polished than ours at this stage. If the printed book is the primary goal, weigh that.</p>
+          <p class="text-brand/50 text-xs mt-1">可以。PostMem 先生成数字故事，你随时可以把它们编辑成一本印刷书。不同的是你不会被锁定在一年的时间线里——3 个故事或 300 个故事后都能打印。话说回来，在现阶段 StoryWorth 的书籍印刷比我们更成熟精致。如果印刷书是你的首要目标，请权衡考虑。</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+            Are my photos and stories private?
+            <span class="text-accent group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="text-brand/50 text-sm mt-1 mb-2">我的照片和故事是私密的吗？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">Your family's memories are yours. PostMem uses encryption for storage and transfer. We do not use your photos or stories to train AI models. You control who sees what, and you can export or delete everything at any time. Full details in our privacy policy.</p>
+          <p class="text-brand/50 text-xs mt-1">你家人的记忆属于你。PostMem 使用加密存储和传输。我们不会用你的照片或故事来训练 AI 模型。你决定谁能看到什么，你随时可以导出或删除所有内容。详情请参阅我们的隐私政策。</p>
+        </details>
+
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+            How is this different from Google Photos or Apple Photos?
+            <span class="text-accent group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="text-brand/50 text-sm mt-1 mb-2">这和 Google Photos 或 Apple Photos 有什么区别？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">Google Photos and Apple Photos store and organize your photos by date and face. That's genuinely useful — but they stop there. They don't connect photos to stories, ask you what happened, or help you preserve the context behind the moments. Research shows that photos trigger autobiographical memories more effectively than questions alone — learn more about <a href="science-photo-memory.html" class="text-accent hover:underline">the science behind why photos trigger memories</a>. PostMem turns "47,000 files in a folder" into "Grandma's life, told through the photos she lived." The storage apps keep your files safe; PostMem turns them into something your grandchildren can read.</p>
+          <p class="text-brand/50 text-xs mt-1">Google Photos 和 Apple Photos 按日期和人脸存储整理你的照片。这确实很有用——但止步于此。它们不会把照片和故事连接起来，不会问你发生了什么，也不会帮你保存那些瞬间背后的故事。研究表明照片比单纯提问更有效地触发自传体记忆——了解更多关于<a href="science-photo-memory.html" class="text-accent hover:underline">照片触发记忆背后的科学</a>。PostMem 把"文件夹里的 47,000 个文件"变成"奶奶的人生，通过她经历的照片来讲述"。存储应用保护你的文件安全；PostMem 把它们变成你的孙辈能阅读的东西。</p>
+        </details>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 my-4">
+        <p class="text-sm font-bold text-amber-800 mb-2">📋 中文批注</p>
+        <p class="text-sm text-amber-900">5 个 FAQ 打消最后顾虑。更新内容：FAQ 1 新增"取决于你的家庭"的诚实补充；FAQ 2 新增不适合完全不用手机的人的说明；FAQ 3 承认 StoryWorth 的书籍印刷更成熟；FAQ 5 新增科学文章链接和更丰富的对比。每个 FAQ 都有 Schema 标记。</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="text-center py-16 mb-12">
+      <p class="text-lg text-brand/70 mb-1 max-w-xl mx-auto">Your family's stories are already in your photos.</p>
+      <p class="text-brand/50 text-sm mt-1 mb-4 max-w-xl mx-auto">你家人的故事已经在你的照片里了。</p>
+      <h2 class="text-3xl font-bold mb-1">PostMem helps you become the person who finally preserved them.</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">PostMem 帮你成为那个最终把它们保存下来的人。</p>
+      <p class="text-brand/50 text-sm mb-6 max-w-xl mx-auto">你不需要启动一个为期一年的写作项目，不需要安排采访环节。你只需要上传你积攒了几十年的照片。</p>
+      <a href="https://postmem.com" class="inline-block bg-accent text-white px-8 py-4 rounded-xl text-lg font-medium hover:opacity-90 transition">Get Started →</a>
+    </section>
+
+    <!-- Author Byline -->
+    <div class="text-center mb-8">
+      <p class="text-brand/40 text-sm">By PostMem Team · Reviewed by PostMem Editorial Team · Published March 16, 2026 · Updated March 25, 2026</p>
+      <p class="text-brand/50 text-xs mt-1">作者 PostMem Team · 审核 PostMem Editorial Team· 发布于 2026 年 3 月 16 日 · 更新于 2026 年 3 月 25 日</p>
+    </div>
+
+    <!-- Sources -->
+    <section class="mb-16 border-t border-brand/10 pt-8">
+      <h2 class="text-xl font-bold mb-1">Sources & References</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-4">来源与参考文献</p>
+      <ul class="text-sm text-brand/60 space-y-2">
+        <li>Reddit community discussions on StoryWorth user experience: r/RedditForGrownups, r/Gifts, r/GiftIdeas, r/AgingParents, r/Genealogy (2023-2025). Threads reviewed for completion rate patterns, "homework" complaints, and writing barrier themes.</li>
+        <li>Trustpilot and App Store user reviews for StoryWorth and Remento (2023-2025).</li>
+        <li>StoryWorth official website — pricing and feature information. <a href="https://storyworth.com" class="text-accent hover:underline">storyworth.com</a>. Accessed March 2026.</li>
+        <li>Remento official website — pricing and feature information. <a href="https://remento.co" class="text-accent hover:underline">remento.co</a>. Accessed March 2026.</li>
+        <li>PostMem user research: semi-structured interviews with 19 memory keepers, ages 38-67, conducted January-March 2025. Internal research; methodology available upon request.</li>
+        <li>Conway, M. A. & Pleydell-Pearce, C. W. (2000). The construction of autobiographical memories in the self-memory system. <em>Psychological Review</em>, 107(2), 261-288.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-4xl mx-auto px-6 py-8 border-t border-brand/10 text-sm text-brand/50 flex justify-between">
+    <span>&copy; 2026 PostMem</span>
+    <div class="space-x-4">
+      <a href="photo-to-story-ai.html" class="hover:text-accent">How It Works</a>
+      <a href="what-to-do-with-old-family-photos.html" class="hover:text-accent">Blog</a>
+    </div>
+  </footer>
+
+</body>
+</html>
