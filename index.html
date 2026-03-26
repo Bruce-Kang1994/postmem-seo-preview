@@ -1431,19 +1431,21 @@ function toggleLang() {
 }
 
 function applyLang() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (i18n[key]) {
-      const text = i18n[key][currentLang];
-      if (el.tagName === 'INPUT' || el.tagName === 'BUTTON') {
-        el.textContent = text;
-      } else {
-        el.innerHTML = text.replace(/\n/g, '<br>');
-      }
+  var missing = [];
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (!i18n[key]) { missing.push('no key: ' + key); return; }
+    var text = i18n[key][currentLang];
+    if (!text) { missing.push('no lang: ' + key + '/' + currentLang); return; }
+    if (el.tagName === 'INPUT' || el.tagName === 'BUTTON') {
+      el.textContent = text;
+    } else {
+      el.innerHTML = text.replace(/\n/g, '<br>');
     }
   });
-  const btn = document.getElementById('langToggle');
-  btn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+  if (missing.length) console.warn('i18n missing:', missing);
+  var btn = document.getElementById('langToggle');
+  if (btn) { btn.textContent = currentLang === 'zh' ? 'EN' : '中文'; }
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
 }
 
