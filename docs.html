@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostMem SEO 文档下载</title>
+  <meta name="description" content="下载 PostMem 10 篇 SEO 文章的原始 Markdown 文档。适合 Founder 阅读、AI 工具处理、开发者集成。">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5efe7;
+      --bg-soft: #fbf8f4;
+      --paper: rgba(255, 255, 255, 0.78);
+      --paper-strong: rgba(255, 255, 255, 0.92);
+      --line: rgba(58, 43, 33, 0.12);
+      --line-strong: rgba(58, 43, 33, 0.18);
+      --text: #2a2018;
+      --muted: rgba(42, 32, 24, 0.68);
+      --soft: rgba(42, 32, 24, 0.52);
+      --accent: #b8723f;
+      --accent-deep: #8f5632;
+      --accent-soft: rgba(184, 114, 63, 0.12);
+      --success: #2f6a58;
+      --shadow-lg: 0 30px 80px rgba(61, 45, 31, 0.12);
+      --shadow-md: 0 18px 48px rgba(61, 45, 31, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 999px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(184, 114, 63, 0.16), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(137, 177, 143, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8f2eb 0%, #f4ede5 48%, #f7f3ee 100%);
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 80px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 18px;
+      margin-bottom: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(251, 248, 244, 0.82);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, #c4834c, #8f5632);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .brand-copy span {
+      display: block;
+      font-size: 12px;
+      color: var(--soft);
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .topnav a, .topnav button.nav-btn {
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.56);
+      border: 1px solid transparent;
+      transition: 180ms ease;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      cursor: pointer;
+    }
+
+    .topnav a:hover, .topnav button.nav-btn:hover {
+      color: var(--text);
+      border-color: var(--line);
+      transform: translateY(-1px);
+    }
+
+    .topnav a.active {
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+      border-color: rgba(184, 114, 63, 0.2);
+    }
+
+    .page-header {
+      padding: 40px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-xl);
+      margin-bottom: 24px;
+    }
+
+    .page-header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 680px;
+    }
+
+    .doc-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .doc-card {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 24px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-lg);
+      transition: 220ms ease;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--line-strong);
+    }
+
+    .doc-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .doc-info h3 {
+      margin: 0 0 4px;
+      font-size: 17px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .doc-info p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .doc-info .doc-type {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(58, 43, 33, 0.08);
+      font-size: 11px;
+      color: var(--soft);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .doc-actions {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .doc-actions a, .doc-actions button {
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 13px;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--text);
+      cursor: pointer;
+      transition: 180ms ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .doc-actions a:hover, .doc-actions button:hover {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+    }
+
+    .doc-actions .btn-copy {
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+      border-color: rgba(184, 114, 63, 0.2);
+    }
+
+    .doc-actions .btn-copy.copied {
+      color: var(--success);
+      background: rgba(47, 106, 88, 0.1);
+      border-color: rgba(47, 106, 88, 0.2);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      padding: 14px 24px;
+      border-radius: var(--radius-sm);
+      background: var(--text);
+      color: white;
+      font-size: 14px;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      transition: 300ms ease;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(58, 43, 33, 0.1);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--soft);
+      font-size: 12px;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100vw - 20px, 1180px);
+        padding-top: 12px;
+      }
+      .topbar {
+        position: static;
+        flex-direction: column;
+        align-items: start;
+      }
+      .topnav { justify-content: flex-start; }
+      .page-header { padding: 24px 20px; }
+      .doc-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .doc-num {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+      }
+      .doc-actions {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">PM</div>
+        <div class="brand-copy">
+          <strong data-i18n="brand.title">PostMem SEO 内容展厅</strong>
+          <span>Preview collection · March 2026</span>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a href="index.html" data-i18n="nav.overview">总览</a>
+        <a href="docs.html" class="active" data-i18n="nav.docs">文档</a>
+        <button id="langToggle" type="button" class="nav-btn" style="padding:9px 16px;border-radius:999px;font-size:13px;color:#8f5632;background:rgba(184,114,63,0.12);border:1px solid rgba(184,114,63,0.2);cursor:pointer;font-family:ui-sans-serif,-apple-system,sans-serif;font-weight:700;letter-spacing:0.02em;">EN</button>
+      </nav>
+    </header>
+
+    <section class="page-header">
+      <h1 data-i18n="docs.h1">原始文档下载</h1>
+      <p data-i18n="docs.desc">10 篇 SEO 文章的 Markdown 源文件。可直接查看、下载，或一键复制全文喂给 AI 工具。</p>
+    </section>
+
+    <div class="doc-list" id="docList"></div>
+
+    <footer class="footer">
+      <span>&copy; 2026 PostMem · Preview Collection</span>
+      <span>Last updated: March 2026</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+var articles = [
+  { num: "01", file: "01-storyworth-alternative.md", title: "StoryWorth Alternative", desc: "PostMem vs StoryWorth 的直接竞品拦截页", descEn: "Direct competitor interception: PostMem vs StoryWorth", type: "Comparison Landing Page" },
+  { num: "02", file: "02-what-to-do-with-old-family-photos.md", title: "What to Do With Old Family Photos", desc: "从「箱子里的照片怎么办」切入的入口级教育页", descEn: "Entry-level education: what to do with photos in the box", type: "Pillar Blog Post" },
+  { num: "03", file: "03-save-family-stories.md", title: "Save Family Stories Before It's Too Late", desc: "用数据和方法打破「总有一天再做」的拖延", descEn: "Using data and methods to break the 'someday' procrastination", type: "Pillar Blog Post" },
+  { num: "04", file: "04-photo-to-story-ai.md", title: "Photo to Story AI", desc: "把「照片变故事」定义成一个新能力", descEn: "Defining 'photo to story' as a concrete capability", type: "Product Feature Page" },
+  { num: "05", file: "05-science-photo-memory.md", title: "The Science Behind Why Photos Trigger Memories", desc: "为「照片优先」定位建立科学证据背书", descEn: "Building scientific evidence for the 'photos first' positioning", type: "Pillar Blog Post" },
+  { num: "06", file: "06-storyworth-vs-remento-vs-postmem.md", title: "StoryWorth vs Remento vs PostMem", desc: "写 / 说 / 照片三种入口的深度比较", descEn: "Deep comparison: writing / speaking / photos as entry points", type: "Comparison Blog Post" },
+  { num: "07", file: "07-skip-the-interview.md", title: "Skip the Interview", desc: "不从「采访」开始，而从照片开启自然对话", descEn: "Skip the formal interview — start conversations with photos", type: "Pillar Blog Post" },
+  { num: "08", file: "08-gift-for-parents.md", title: "The Gift for Parents Who Have Everything", desc: "把「保存故事」重新定义为一份真正有意义的礼物", descEn: "Reframing story preservation as a truly meaningful gift", type: "Pillar Blog Post" },
+  { num: "09", file: "09-how-to-preserve-family-stories.md", title: "How to Preserve Family Stories", desc: "把方法、选择和行动计划放在一个核心总纲里", descEn: "Methods, choices, and action plans in one cornerstone guide", type: "Pillar Blog Post" },
+  { num: "10", file: "10-best-family-story-tools.md", title: "9 Best Tools to Preserve Family Stories in 2026", desc: "市场全景视角下的工具榜单", descEn: "Market landscape: tool rankings and honest comparison", type: "Aggregated Listicle" }
+];
+
+var i18n = {
+  "brand.title": { zh: "PostMem SEO 内容展厅", en: "PostMem SEO Content Showroom" },
+  "nav.overview": { zh: "总览", en: "Overview" },
+  "nav.docs": { zh: "文档", en: "Docs" },
+  "docs.h1": { zh: "原始文档下载", en: "Raw Document Downloads" },
+  "docs.desc": { zh: "10 篇 SEO 文章的 Markdown 源文件。可直接查看、下载，或一键复制全文喂给 AI 工具。", en: "Markdown source files for all 10 SEO articles. View, download, or copy the full text for AI tools." },
+  "btn.view": { zh: "查看", en: "View" },
+  "btn.download": { zh: "下载", en: "Download" },
+  "btn.copy": { zh: "复制全文", en: "Copy All" },
+  "btn.copied": { zh: "已复制", en: "Copied" },
+  "toast.copied": { zh: "已复制到剪贴板", en: "Copied to clipboard" },
+  "toast.fail": { zh: "复制失败，请手动复制", en: "Copy failed, please copy manually" }
+};
+
+var currentLang = localStorage.getItem('postmem-lang') || 'zh';
+
+function t(key) {
+  return i18n[key] ? (i18n[key][currentLang] || i18n[key].zh) : key;
+}
+
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  localStorage.setItem('postmem-lang', currentLang);
+  applyLang();
+  renderList();
+}
+
+function applyLang() {
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (i18n[key] && i18n[key][currentLang]) {
+      el.innerHTML = i18n[key][currentLang].replace(/\n/g, '<br>');
+    }
+  });
+  var btn = document.getElementById('langToggle');
+  if (btn) btn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+}
+
+function showToast(msg) {
+  var toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(function() { toast.classList.remove('show'); }, 2000);
+}
+
+function copyFile(file, btnEl) {
+  fetch('docs/' + file)
+    .then(function(r) { return r.text(); })
+    .then(function(text) {
+      return navigator.clipboard.writeText(text).then(function() {
+        btnEl.textContent = t('btn.copied');
+        btnEl.classList.add('copied');
+        showToast(t('toast.copied'));
+        setTimeout(function() {
+          btnEl.textContent = t('btn.copy');
+          btnEl.classList.remove('copied');
+        }, 2000);
+      });
+    })
+    .catch(function() {
+      showToast(t('toast.fail'));
+    });
+}
+
+function renderList() {
+  var container = document.getElementById('docList');
+  container.innerHTML = '';
+  articles.forEach(function(a) {
+    var desc = currentLang === 'en' ? a.descEn : a.desc;
+    var card = document.createElement('div');
+    card.className = 'doc-card';
+    card.innerHTML =
+      '<div class="doc-num">' + a.num + '</div>' +
+      '<div class="doc-info">' +
+        '<h3>' + a.title + '</h3>' +
+        '<p>' + desc + '</p>' +
+        '<span class="doc-type">' + a.type + '</span>' +
+      '</div>' +
+      '<div class="doc-actions">' +
+        '<a href="docs/' + a.file + '" target="_blank">' + t('btn.view') + '</a>' +
+        '<a href="docs/' + a.file + '" download>' + t('btn.download') + ' ↓</a>' +
+        '<button class="btn-copy" data-file="' + a.file + '">' + t('btn.copy') + '</button>' +
+      '</div>';
+    container.appendChild(card);
+  });
+
+  container.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      copyFile(this.getAttribute('data-file'), this);
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  applyLang();
+  renderList();
+  document.getElementById('langToggle').addEventListener('click', toggleLang);
+});
+</script>
+</body>
+</html>
