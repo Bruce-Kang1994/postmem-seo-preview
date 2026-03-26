@@ -725,66 +725,67 @@
       <div class="brand">
         <div class="brand-mark">PM</div>
         <div class="brand-copy">
-          <strong>PostMem SEO 内容展厅</strong>
+          <strong data-i18n="brand.title">PostMem SEO 内容展厅</strong>
           <span>Preview collection · March 2026</span>
         </div>
       </div>
       <nav class="topnav">
-        <a href="#overview">总览</a>
-        <a href="#paths">推荐路径</a>
-        <a href="#library">内容资产</a>
-        <a href="#stats">统计</a>
+        <a href="#overview" data-i18n="nav.overview">总览</a>
+        <a href="#paths" data-i18n="nav.paths">推荐路径</a>
+        <a href="#library" data-i18n="nav.library">内容资产</a>
+        <a href="#stats" data-i18n="nav.stats">统计</a>
+        <button id="langToggle" onclick="toggleLang()" style="padding:9px 16px;border-radius:999px;font-size:13px;color:var(--accent-deep);background:var(--accent-soft);border:1px solid rgba(184,114,63,0.2);cursor:pointer;font-family:ui-sans-serif,-apple-system,sans-serif;font-weight:700;transition:180ms ease;letter-spacing:0.02em;">EN</button>
       </nav>
     </header>
 
     <section class="hero" id="overview">
       <div class="hero-card">
         <div class="hero-copy">
-          <span class="eyebrow">SEO Preview Collection</span>
-          <h1>把 10 篇 SEO 资产，<br>整理成一个真正可读、可判断、可展示的展厅。</h1>
-          <p>这不是内部清单页，而是 PostMem SEO 体系的前台入口。它需要帮助读者快速理解整体结构、找到合适的阅读路径，并对每一篇内容的定位和价值形成清晰判断。</p>
+          <span class="eyebrow" data-i18n="hero.eyebrow">SEO Preview Collection</span>
+          <h1 data-i18n="hero.h1">把 10 篇 SEO 资产，<br>整理成一个真正可读、可判断、可展示的展厅。</h1>
+          <p data-i18n="hero.desc">这不是内部清单页，而是 PostMem SEO 体系的前台入口。它需要帮助读者快速理解整体结构、找到合适的阅读路径，并对每一篇内容的定位和价值形成清晰判断。</p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#paths">从推荐阅读路径开始</a>
-            <a class="button secondary" href="seo-framework.html">查看七层框架</a>
+            <a class="button primary" href="#paths" data-i18n="hero.btn1">从推荐阅读路径开始</a>
+            <a class="button secondary" href="seo-framework.html" data-i18n="hero.btn2">查看七层框架</a>
           </div>
 
           <div class="hero-meta">
-            <span class="chip">10 篇内容资产</span>
-            <span class="chip">4 篇 Priority A</span>
-            <span class="chip">12 个 Schema 标记</span>
-            <span class="chip">覆盖转化 / 教育 / 证据三种内容角色</span>
+            <span class="chip" data-i18n="hero.chip1">10 篇内容资产</span>
+            <span class="chip" data-i18n="hero.chip2">4 篇 Priority A</span>
+            <span class="chip" data-i18n="hero.chip3">12 个 Schema 标记</span>
+            <span class="chip" data-i18n="hero.chip4">覆盖转化 / 教育 / 证据三种内容角色</span>
           </div>
         </div>
       </div>
 
       <aside class="hero-side">
         <div>
-          <p class="panel-label">如何阅读这个页面</p>
-          <h3>先建立地图，再进入单篇。</h3>
-          <p>当前版本按“战略基础 → 转化拦截 → 教育支柱 → 市场榜单”的逻辑组织，而不是按文件编号简单罗列。</p>
+          <p class=”panel-label” data-i18n=”side.label”>如何阅读这个页面</p>
+          <h3 data-i18n=”side.h3”>先建立地图，再进入单篇。</h3>
+          <p data-i18n=”side.desc”>当前版本按”战略基础 → 转化拦截 → 教育支柱 → 市场榜单”的逻辑组织，而不是按文件编号简单罗列。</p>
         </div>
 
         <div class="mini-list">
           <div class="mini-item">
             <span class="pill-number">01</span>
             <div>
-              <strong class="panel-label">先看路径</strong>
-              <p>如果你是第一次了解这套内容，先看推荐路径，不要直接从 10 张卡里盲选。</p>
+              <strong class="panel-label" data-i18n="side.s1.title">先看路径</strong>
+              <p data-i18n="side.s1.desc">如果你是第一次了解这套内容，先看推荐路径，不要直接从 10 张卡里盲选。</p>
             </div>
           </div>
           <div class="mini-item">
             <span class="pill-number">02</span>
             <div>
-              <strong class="panel-label">再看角色</strong>
-              <p>每篇文章都在做不同的工作：教育、证据、对比、转化，不应该混着看。</p>
+              <strong class="panel-label" data-i18n="side.s2.title">再看角色</strong>
+              <p data-i18n="side.s2.desc">每篇文章都在做不同的工作：教育、证据、对比、转化，不应该混着看。</p>
             </div>
           </div>
           <div class="mini-item">
             <span class="pill-number">03</span>
             <div>
-              <strong class="panel-label">最后进正文</strong>
-              <p>当你已经知道“为什么点开”时，阅读和评估才会更高效。</p>
+              <strong class=”panel-label” data-i18n=”side.s3.title”>最后进正文</strong>
+              <p data-i18n=”side.s3.desc”>当你已经知道”为什么点开”时，阅读和评估才会更高效。</p>
             </div>
           </div>
         </div>
@@ -793,33 +794,33 @@
 
     <section class="overview-grid">
       <a class="framework-card" href="seo-framework.html">
-        <p class="panel-label">战略基础</p>
-        <h3>SEO 七层框架详解</h3>
+        <p class="panel-label" data-i18n="fw.label">战略基础</p>
+        <h3 data-i18n="fw.title">SEO 七层框架详解</h3>
         <p>所有页面背后的战略依据。从目标层、关键词层、页面层，一直落到技术、分发和数据层，帮助理解为什么是这 10 篇，而不是随意拼出来的 10 篇。</p>
-        <span class="framework-link">打开方法论页面 <span aria-hidden="true">→</span></span>
+        <span class="framework-link"><span data-i18n="fw.link">打开方法论页面</span> <span aria-hidden="true">→</span></span>
       </a>
 
-      <div class="framework-card">
-        <p class="panel-label">这个页面的工作</p>
-        <h3>不是“列清单”，而是“帮判断”。</h3>
-        <p>原版的问题在于信息密度大，但缺少方向感。这个版本把最先需要知道的信息放在前面：先给整体地图，再给推荐路径，再给每张内容卡片的作用和适合点开时机。</p>
+      <div class=”framework-card”>
+        <p class=”panel-label” data-i18n=”meta.label”>这个页面的工作</p>
+        <h3 data-i18n=”meta.h3”>不是”列清单”，而是”帮判断”。</h3>
+        <p data-i18n=”meta.desc”>原版的问题在于信息密度大，但缺少方向感。这个版本把最先需要知道的信息放在前面：先给整体地图，再给推荐路径，再给每张内容卡片的作用和适合点开时机。</p>
       </div>
     </section>
 
     <section id="paths">
       <div class="section-head">
         <div>
-          <h2>推荐阅读路径</h2>
-          <p>如果这套内容未来要对内展示、对外提案、甚至直接复用为前台入口，读者不应该自己猜“从哪篇开始”。下面这三条路径，是最符合人类阅读逻辑的入口。</p>
+          <h2 data-i18n=”paths.h2”>推荐阅读路径</h2>
+          <p data-i18n=”paths.desc”>如果这套内容未来要对内展示、对外提案、甚至直接复用为前台入口，读者不应该自己猜”从哪篇开始”。下面这三条路径，是最符合人类阅读逻辑的入口。</p>
         </div>
       </div>
 
       <div class="roadmap">
         <article class="path-card">
           <p class="panel-label">Path 1</p>
-          <h3>第一次看这套内容</h3>
-          <p>先理解定位和方法，再进入一篇最稳的教育支柱文，最后再看产品或对比页。</p>
-          <strong>建议顺序</strong>
+          <h3 data-i18n="path1.title">第一次看这套内容</h3>
+          <p data-i18n="path1.desc">先理解定位和方法，再进入一篇最稳的教育支柱文，最后再看产品或对比页。</p>
+          <strong data-i18n="path1.order">建议顺序</strong>
           <div class="path-links">
             <a href="seo-framework.html">七层框架</a>
             <a href="how-to-preserve-family-stories.html">How to Preserve Family Stories</a>
@@ -829,9 +830,9 @@
 
         <article class="path-card">
           <p class="panel-label">Path 2</p>
-          <h3>要看转化和商业意图</h3>
-          <p>先看高意图比较页，再看产品定义页，最后看市场榜单，最适合评估获客效率。</p>
-          <strong>建议顺序</strong>
+          <h3 data-i18n="path2.title">要看转化和商业意图</h3>
+          <p data-i18n="path2.desc">先看高意图比较页，再看产品定义页，最后看市场榜单，最适合评估获客效率。</p>
+          <strong data-i18n="path2.order">建议顺序</strong>
           <div class="path-links">
             <a href="storyworth-alternative.html">StoryWorth Alternative</a>
             <a href="storyworth-vs-remento-vs-postmem.html">三方对比</a>
@@ -841,9 +842,9 @@
 
         <article class="path-card">
           <p class="panel-label">Path 3</p>
-          <h3>要看“照片优先”为什么成立</h3>
-          <p>先用问题感知内容建立场景，再用科学论证形成背书，最后过渡到产品页。</p>
-          <strong>建议顺序</strong>
+          <h3 data-i18n=”path3.title”>要看”照片优先”为什么成立</h3>
+          <p data-i18n=”path3.desc”>先用问题感知内容建立场景，再用科学论证形成背书，最后过渡到产品页。</p>
+          <strong data-i18n=”path3.order”>建议顺序</strong>
           <div class="path-links">
             <a href="what-to-do-with-old-family-photos.html">Old Family Photos</a>
             <a href="science-photo-memory.html">Science of Memory</a>
@@ -856,16 +857,16 @@
     <section id="library">
       <div class="section-head">
         <div>
-          <h2>内容资产库</h2>
-          <p>所有内容按“读者此刻在解决什么问题”组织，而不是按文件编号组织。这样更适合前台浏览，也更适合未来直接复用为 SEO 展示页。</p>
+          <h2 data-i18n=”lib.h2”>内容资产库</h2>
+          <p data-i18n=”lib.desc”>所有内容按”读者此刻在解决什么问题”组织，而不是按文件编号组织。这样更适合前台浏览，也更适合未来直接复用为 SEO 展示页。</p>
         </div>
       </div>
 
       <section class="library-card">
         <div class="section-head">
           <div>
-            <h2>战略与起手式</h2>
-            <p>这两张卡定义“为什么做这套内容”以及“用户最终会落到哪”。适合第一次接触 PostMem SEO 体系的人先看。</p>
+            <h2 data-i18n=”sec.strategy”>战略与起手式</h2>
+            <p data-i18n=”sec.strategy.desc”>这两张卡定义”为什么做这套内容”以及”用户最终会落到哪”。适合第一次接触 PostMem SEO 体系的人先看。</p>
           </div>
         </div>
         <div class="library-grid">
@@ -874,19 +875,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>Framework</div>
                 <h3 class="card-title">SEO 七层框架详解</h3>
-                <p class="card-subtitle">整套内容资产背后的战略蓝图</p>
+                <p class="card-subtitle" data-i18n="fw.subtitle">整套内容资产背后的战略蓝图</p>
                 <div class="card-url">/seo-framework</div>
               </div>
               <span class="priority a">Foundation</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>它在做什么</strong>
-                <div class="card-copy">把业务目标、关键词地图、页面类型、技术结构和数据验证串成一个闭环，解释为什么这 10 篇内容是合理的。</div>
+                <strong data-i18n="card.whatitdoes">它在做什么</strong>
+                <div class="card-copy" data-i18n="fw.what">把业务目标、关键词地图、页面类型、技术结构和数据验证串成一个闭环，解释为什么这 10 篇内容是合理的。</div>
               </div>
               <div class="card-block">
-                <strong>适合什么时候看</strong>
-                <div class="card-copy">当你想先理解战略，而不是先看单篇文章时。</div>
+                <strong data-i18n="card.when">适合什么时候看</strong>
+                <div class="card-copy" data-i18n="fw.when">当你想先理解战略，而不是先看单篇文章时。</div>
               </div>
             </div>
             <span class="card-link"><span>查看方法论</span><span>→</span></span>
@@ -897,19 +898,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#4 Feature</div>
                 <h3 class="card-title">Photo to Story AI</h3>
-                <p class="card-subtitle">把“照片变故事”定义成一个新能力，而不是一个抽象口号</p>
+                <p class=”card-subtitle” data-i18n=”p4.subtitle”>把”照片变故事”定义成一个新能力，而不是一个抽象口号</p>
                 <div class="card-url">/photo-to-story-ai</div>
               </div>
               <span class="priority a">Priority A</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>它在做什么</strong>
-                <div class="card-copy">定义品类，解释 PostMem 的核心机制，并承接所有教育页和对比页的最终点击。</div>
+                <strong data-i18n="card.whatitdoes">它在做什么</strong>
+                <div class="card-copy" data-i18n="p4.what">定义品类，解释 PostMem 的核心机制，并承接所有教育页和对比页的最终点击。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">用户已经知道自己想把照片整理成故事，但还不知道谁能做到、具体是怎么做到。</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class="card-copy" data-i18n="p4.problem">用户已经知道自己想把照片整理成故事，但还不知道谁能做到、具体是怎么做到。</div>
               </div>
               <div class="tags">
                 <span class="tag">品类定义词</span>
@@ -917,7 +918,7 @@
                 <span class="tag">转化型</span>
               </div>
             </div>
-            <span class="card-link"><span>打开功能页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p4.link">打开功能页</span><span>→</span></span>
           </a>
         </div>
       </section>
@@ -925,8 +926,8 @@
       <section class="library-card">
         <div class="section-head">
           <div>
-            <h2>高意图转化页面</h2>
-            <p>这些内容面向已经有明确目标的读者。重点不是教育市场，而是帮助用户在几个解决方案之间更快做决定。</p>
+            <h2 data-i18n="sec.conversion">高意图转化页面</h2>
+            <p data-i18n="sec.conversion.desc">这些内容面向已经有明确目标的读者。重点不是教育市场，而是帮助用户在几个解决方案之间更快做决定。</p>
           </div>
         </div>
         <div class="article-grid">
@@ -935,19 +936,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#1 Comparison</div>
                 <h3 class="card-title">StoryWorth Alternative</h3>
-                <p class="card-subtitle">从照片开始，而不是从空白页开始</p>
+                <p class="card-subtitle" data-i18n="p1.subtitle">从照片开始，而不是从空白页开始</p>
                 <div class="card-url">/storyworth-alternative</div>
               </div>
               <span class="priority a">Priority A</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">PostMem vs StoryWorth 的直接竞品拦截页，服务已经在搜索替代方案的用户。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class="card-copy" data-i18n="p1.what">PostMem vs StoryWorth 的直接竞品拦截页，服务已经在搜索替代方案的用户。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">用户不是来接受教育，而是来缩短决策路径，他需要的是对比和判断依据。</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class="card-copy" data-i18n="p1.problem">用户不是来接受教育，而是来缩短决策路径，他需要的是对比和判断依据。</div>
               </div>
               <div class="tags">
                 <span class="tag">竞品拦截词</span>
@@ -955,7 +956,7 @@
                 <span class="tag">转化型</span>
               </div>
             </div>
-            <span class="card-link"><span>打开对比页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p1.link">打开对比页</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="storyworth-vs-remento-vs-postmem.html">
@@ -963,19 +964,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#6 Comparison</div>
                 <h3 class="card-title">StoryWorth vs Remento vs PostMem</h3>
-                <p class="card-subtitle">写 / 说 / 照片三种入口的深度比较</p>
+                <p class="card-subtitle" data-i18n="p6.subtitle">写 / 说 / 照片三种入口的深度比较</p>
                 <div class="card-url">/storyworth-vs-remento-vs-postmem</div>
               </div>
               <span class="priority b">Priority B</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">不是只做品牌对撞，而是把不同家庭的记录方式差异讲清楚。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class="card-copy" data-i18n="p6.what">不是只做品牌对撞，而是把不同家庭的记录方式差异讲清楚。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">用户已经接近购买阶段，但在不同工具、不同输入方式之间摇摆不定。</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class="card-copy" data-i18n="p6.problem">用户已经接近购买阶段，但在不同工具、不同输入方式之间摇摆不定。</div>
               </div>
               <div class="tags">
                 <span class="tag">竞品词</span>
@@ -983,7 +984,7 @@
                 <span class="tag">决策辅助</span>
               </div>
             </div>
-            <span class="card-link"><span>查看深度比较</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p6.link">查看深度比较</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="gift-for-parents.html">
@@ -991,19 +992,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#8 Gift</div>
                 <h3 class="card-title">The Gift for Parents Who Have Everything</h3>
-                <p class="card-subtitle">把“保存故事”重新定义为一份真正有意义的礼物</p>
+                <p class=”card-subtitle” data-i18n=”p8.subtitle”>把”保存故事”重新定义为一份真正有意义的礼物</p>
                 <div class="card-url">/blog/gift-for-parents-who-have-everything</div>
               </div>
               <span class="priority b">Priority B</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">节日与礼物经济切口的转化页，把产品进入场景从“工具”换成“礼物”。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class=”card-copy” data-i18n=”p8.what”>节日与礼物经济切口的转化页，把产品进入场景从”工具”换成”礼物”。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">用户的问题不是“要不要记录故事”，而是“送什么礼物能真正被记住”。</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class=”card-copy” data-i18n=”p8.problem”>用户的问题不是”要不要记录故事”，而是”送什么礼物能真正被记住”。</div>
               </div>
               <div class="tags">
                 <span class="tag">礼物经济</span>
@@ -1011,7 +1012,7 @@
                 <span class="tag">教育 + 转化</span>
               </div>
             </div>
-            <span class="card-link"><span>查看礼物页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p8.link">查看礼物页</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="best-family-story-tools.html">
@@ -1019,19 +1020,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#10 Listicle</div>
                 <h3 class="card-title">9 Best Tools to Preserve Family Stories in 2026</h3>
-                <p class="card-subtitle">市场全景视角下的工具榜单与推荐框架</p>
+                <p class="card-subtitle" data-i18n="p10.subtitle">市场全景视角下的工具榜单与推荐框架</p>
                 <div class="card-url">/blog/best-family-story-tools-2026</div>
               </div>
               <span class="priority b">Priority B</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">市场型聚合页，适合承接“best tools / best apps”类高商业意图搜索。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class=”card-copy” data-i18n=”p10.what”>市场型聚合页，适合承接”best tools / best apps”类高商业意图搜索。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">用户要的是一张全景图，不只是某个品牌的一篇自我介绍。</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class="card-copy" data-i18n="p10.problem">用户要的是一张全景图，不只是某个品牌的一篇自我介绍。</div>
               </div>
               <div class="tags">
                 <span class="tag">聚合页</span>
@@ -1039,7 +1040,7 @@
                 <span class="tag">市场图景</span>
               </div>
             </div>
-            <span class="card-link"><span>查看工具榜单</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p10.link">查看工具榜单</span><span>→</span></span>
           </a>
         </div>
       </section>
@@ -1047,8 +1048,8 @@
       <section class="library-card">
         <div class="section-head">
           <div>
-            <h2>教育型支柱内容</h2>
-            <p>这部分负责建立问题意识、降低理解门槛，并持续为产品页和对比页输送高质量读者。每篇都回答一个不同阶段的问题。</p>
+            <h2 data-i18n="sec.education">教育型支柱内容</h2>
+            <p data-i18n="sec.education.desc">这部分负责建立问题意识、降低理解门槛，并持续为产品页和对比页输送高质量读者。每篇都回答一个不同阶段的问题。</p>
           </div>
         </div>
         <div class="article-grid">
@@ -1057,19 +1058,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#2 Guide</div>
                 <h3 class="card-title">What to Do With Old Family Photos</h3>
-                <p class="card-subtitle">从“箱子里的照片怎么办”切入的入口级教育页</p>
+                <p class=”card-subtitle” data-i18n=”p2.subtitle”>从”箱子里的照片怎么办”切入的入口级教育页</p>
                 <div class="card-url">/blog/what-to-do-with-old-family-photos</div>
               </div>
               <span class="priority a">Priority A</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">面向问题感知阶段的读者，先帮他们处理眼前的混乱，再自然带出更深的故事保存需求。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class="card-copy" data-i18n="p2.what">面向问题感知阶段的读者，先帮他们处理眼前的混乱，再自然带出更深的故事保存需求。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">“我有很多旧照片，但根本不知道该怎么处理。”</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class=”card-copy” data-i18n=”p2.problem”>”我有很多旧照片，但根本不知道该怎么处理。”</div>
               </div>
               <div class="tags">
                 <span class="tag">问题感知词</span>
@@ -1077,7 +1078,7 @@
                 <span class="tag">入口页</span>
               </div>
             </div>
-            <span class="card-link"><span>进入教育页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p2.link">进入教育页</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="save-family-stories.html">
@@ -1085,19 +1086,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#3 Pillar</div>
                 <h3 class="card-title">Save Family Stories Before It’s Too Late</h3>
-                <p class="card-subtitle">用数据和方法打破“总有一天再做”的拖延</p>
+                <p class=”card-subtitle” data-i18n=”p3.subtitle”>用数据和方法打破”总有一天再做”的拖延</p>
                 <div class="card-url">/blog/save-family-stories-before-its-too-late</div>
               </div>
               <span class="priority a">Priority A</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">情绪触发和行动指导兼具的支柱页，负责把“知道重要”推进到“开始动手”。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class=”card-copy” data-i18n=”p3.what”>情绪触发和行动指导兼具的支柱页，负责把”知道重要”推进到”开始动手”。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">“我一直知道应该做，但总是没开始。”</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class=”card-copy” data-i18n=”p3.problem”>”我一直知道应该做，但总是没开始。”</div>
               </div>
               <div class="tags">
                 <span class="tag">情绪触发词</span>
@@ -1105,7 +1106,7 @@
                 <span class="tag">行动驱动</span>
               </div>
             </div>
-            <span class="card-link"><span>查看支柱页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p3.link">查看支柱页</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="science-photo-memory.html">
@@ -1113,19 +1114,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#5 Evidence</div>
                 <h3 class="card-title">The Science Behind Why Photos Trigger Memories</h3>
-                <p class="card-subtitle">为“照片优先”定位建立理论与证据层背书</p>
+                <p class=”card-subtitle” data-i18n=”p5.subtitle”>为”照片优先”定位建立理论与证据层背书</p>
                 <div class="card-url">/blog/why-family-photos-trigger-memories</div>
               </div>
               <span class="priority a">Priority A</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">全站的证据底盘，其他文章谈“照片更能触发记忆”时，都应回流到这里。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class=”card-copy” data-i18n=”p5.what”>全站的证据底盘，其他文章谈”照片更能触发记忆”时，都应回流到这里。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">“为什么一定要从照片切入，而不是单纯提问？”</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class=”card-copy” data-i18n=”p5.problem”>”为什么一定要从照片切入，而不是单纯提问？”</div>
               </div>
               <div class="tags">
                 <span class="tag">证据型</span>
@@ -1133,7 +1134,7 @@
                 <span class="tag">GEO 可引用页</span>
               </div>
             </div>
-            <span class="card-link"><span>打开证据页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p5.link">打开证据页</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="skip-the-interview.html">
@@ -1141,19 +1142,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#7 Counter</div>
                 <h3 class="card-title">Skip the Interview</h3>
-                <p class="card-subtitle">不从“采访”开始，而从照片开启自然对话</p>
+                <p class=”card-subtitle” data-i18n=”p7.subtitle”>不从”采访”开始，而从照片开启自然对话</p>
                 <div class="card-url">/blog/capture-family-stories-with-photos</div>
               </div>
               <span class="priority b">Priority B</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">反向叙事页，用一个更轻松的入口去拦截“how to interview grandparents”类搜索需求。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class=”card-copy” data-i18n=”p7.what”>反向叙事页，用一个更轻松的入口去拦截”how to interview grandparents”类搜索需求。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">家人不喜欢被正式采访，但看到照片时却愿意自然讲起故事。</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class="card-copy" data-i18n="p7.problem">家人不喜欢被正式采访，但看到照片时却愿意自然讲起故事。</div>
               </div>
               <div class="tags">
                 <span class="tag">反向截流</span>
@@ -1161,7 +1162,7 @@
                 <span class="tag">教育型</span>
               </div>
             </div>
-            <span class="card-link"><span>查看反向叙事页</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p7.link">查看反向叙事页</span><span>→</span></span>
           </a>
 
           <a class="article-card" href="how-to-preserve-family-stories.html">
@@ -1169,19 +1170,19 @@
               <div>
                 <div class="card-id"><span class="dot"></span>#9 Cornerstone</div>
                 <h3 class="card-title">How to Preserve Family Stories</h3>
-                <p class="card-subtitle">把方法、选择和行动计划放在一个核心总纲里</p>
+                <p class="card-subtitle" data-i18n="p9.subtitle">把方法、选择和行动计划放在一个核心总纲里</p>
                 <div class="card-url">/blog/how-to-preserve-family-stories</div>
               </div>
               <span class="priority b">Priority B</span>
             </div>
             <div class="card-body">
               <div class="card-block">
-                <strong>这个页面是什么</strong>
-                <div class="card-copy">站内最适合作为核心枢纽的综合指南页，负责承接广泛问题并分发到各子页。</div>
+                <strong data-i18n="card.whatpage">这个页面是什么</strong>
+                <div class="card-copy" data-i18n="p9.what">站内最适合作为核心枢纽的综合指南页，负责承接广泛问题并分发到各子页。</div>
               </div>
               <div class="card-block">
-                <strong>解决什么问题</strong>
-                <div class="card-copy">“我想做这件事，但不知道从哪种方法开始最合适。”</div>
+                <strong data-i18n="card.problem">解决什么问题</strong>
+                <div class=”card-copy” data-i18n=”p9.problem”>”我想做这件事，但不知道从哪种方法开始最合适。”</div>
               </div>
               <div class="tags">
                 <span class="tag">综合指南</span>
@@ -1189,7 +1190,7 @@
                 <span class="tag">教育型</span>
               </div>
             </div>
-            <span class="card-link"><span>进入核心指南</span><span>→</span></span>
+            <span class="card-link"><span data-i18n="p9.link">进入核心指南</span><span>→</span></span>
           </a>
         </div>
       </section>
@@ -1198,38 +1199,38 @@
     <section id="stats">
       <div class="section-head">
         <div>
-          <h2>这套内容目前覆盖了什么</h2>
-          <p>用统计卡片收尾，不是为了“好看”，而是为了让这套内容的边界和完成度更一眼可读。适合演示、复盘和对外展示。</p>
+          <h2 data-i18n=”stats.h2”>这套内容目前覆盖了什么</h2>
+          <p data-i18n=”stats.desc”>用统计卡片收尾，不是为了”好看”，而是为了让这套内容的边界和完成度更一眼可读。适合演示、复盘和对外展示。</p>
         </div>
       </div>
 
       <div class="stats-grid">
         <article class="stat-card">
           <p class="stat-value">10</p>
-          <strong>内容页面</strong>
-          <p>覆盖比较页、功能页、支柱文章和榜单页。</p>
+          <strong data-i18n="stats.pages">内容页面</strong>
+          <p data-i18n="stats.pages.desc">覆盖比较页、功能页、支柱文章和榜单页。</p>
         </article>
         <article class="stat-card">
           <p class="stat-value">4</p>
-          <strong>Priority A</strong>
-          <p>当前最值得优先投入和优先打磨的页面。</p>
+          <strong data-i18n="stats.priority">Priority A</strong>
+          <p data-i18n="stats.priority.desc">当前最值得优先投入和优先打磨的页面。</p>
         </article>
         <article class="stat-card">
           <p class="stat-value">12</p>
-          <strong>Schema 标记</strong>
-          <p>FAQ、HowTo、Product 等结构化语义资产。</p>
+          <strong data-i18n="stats.schema">Schema 标记</strong>
+          <p data-i18n="stats.schema.desc">FAQ、HowTo、Product 等结构化语义资产。</p>
         </article>
         <article class="stat-card">
           <p class="stat-value">3</p>
-          <strong>主要角色</strong>
-          <p>转化型、教育型、证据型三种内容角色协同工作。</p>
+          <strong data-i18n="stats.roles">主要角色</strong>
+          <p data-i18n="stats.roles.desc">转化型、教育型、证据型三种内容角色协同工作。</p>
         </article>
       </div>
 
       <div class="summary-panel">
-        <p><strong>页面类型分布：</strong>对比页 ×2 · 功能页 ×1 · 支柱博客 ×6 · 聚合榜单 ×1</p>
-        <p><strong>内容职责分布：</strong>不是每篇都负责转化。有的负责教育市场，有的负责建立证据，有的负责缩短购买决策路径。</p>
-        <p><strong>这个版本的 UI 重点：</strong>先让读者知道自己在哪里、应该怎么读、为什么点开，而不是把所有文章平铺成一张内部清单。</p>
+        <p><strong><span data-i18n="stats.s1">页面类型分布：</span></strong><span data-i18n="stats.s1v">对比页 ×2 · 功能页 ×1 · 支柱博客 ×6 · 聚合榜单 ×1</span></p>
+        <p><strong><span data-i18n="stats.s2">内容职责分布：</span></strong><span data-i18n="stats.s2v">不是每篇都负责转化。有的负责教育市场，有的负责建立证据，有的负责缩短购买决策路径。</span></p>
+        <p><strong><span data-i18n="stats.s3">这个版本的 UI 重点：</span></strong><span data-i18n="stats.s3v">先让读者知道自己在哪里、应该怎么读、为什么点开，而不是把所有文章平铺成一张内部清单。</span></p>
       </div>
     </section>
 
@@ -1238,5 +1239,168 @@
       <span>Last updated: March 2026 · Designed as a readable SEO showroom</span>
     </footer>
   </div>
+<script>
+const i18n = {
+  // Nav
+  "nav.overview": { zh: "总览", en: "Overview" },
+  "nav.paths": { zh: "推荐路径", en: "Paths" },
+  "nav.library": { zh: "内容资产", en: "Library" },
+  "nav.stats": { zh: "统计", en: "Stats" },
+  // Brand
+  "brand.title": { zh: "PostMem SEO 内容展厅", en: "PostMem SEO Content Showroom" },
+  // Hero
+  "hero.eyebrow": { zh: "SEO Preview Collection", en: "SEO Preview Collection" },
+  "hero.h1": { zh: "把 10 篇 SEO 资产，\n整理成一个真正可读、可判断、可展示的展厅。", en: "10 SEO content assets,\norganized into a readable, assessable showroom." },
+  "hero.desc": { zh: "这不是内部清单页，而是 PostMem SEO 体系的前台入口。它需要帮助读者快速理解整体结构、找到合适的阅读路径，并对每一篇内容的定位和价值形成清晰判断。", en: "This isn't an internal checklist — it's the front-facing entry point for PostMem's SEO system. It helps readers quickly understand the structure, find the right reading path, and form clear judgments about each page." },
+  "hero.btn1": { zh: "从推荐阅读路径开始", en: "Start with Reading Paths" },
+  "hero.btn2": { zh: "查看七层框架", en: "View 7-Layer Framework" },
+  "hero.chip1": { zh: "10 篇内容资产", en: "10 Content Assets" },
+  "hero.chip2": { zh: "4 篇 Priority A", en: "4 Priority A Pages" },
+  "hero.chip3": { zh: "12 个 Schema 标记", en: "12 Schema Markups" },
+  "hero.chip4": { zh: "覆盖转化 / 教育 / 证据三种内容角色", en: "Covering conversion / education / evidence roles" },
+  // How to read
+  "side.label": { zh: "如何阅读这个页面", en: "How to read this page" },
+  "side.h3": { zh: "先建立地图，再进入单篇。", en: "Build the map first, then dive into articles." },
+  "side.desc": { zh: '当前版本按"战略基础 → 转化拦截 → 教育支柱 → 市场榜单"的逻辑组织，而不是按文件编号简单罗列。', en: "Organized by strategy → conversion → education → market listicle — not by file number." },
+  "side.s1.title": { zh: "先看路径", en: "Start with paths" },
+  "side.s1.desc": { zh: "如果你是第一次了解这套内容，先看推荐路径，不要直接从 10 张卡里盲选。", en: "If this is your first time, start with the recommended paths — don't jump into 10 cards blindly." },
+  "side.s2.title": { zh: "再看角色", en: "Understand roles" },
+  "side.s2.desc": { zh: "每篇文章都在做不同的工作：教育、证据、对比、转化，不应该混着看。", en: "Each article serves a different role: education, evidence, comparison, conversion. Don't mix them." },
+  "side.s3.title": { zh: "最后进正文", en: "Then read articles" },
+  "side.s3.desc": { zh: '当你已经知道"为什么点开"时，阅读和评估才会更高效。', en: "Reading is more efficient when you already know why you're opening a page." },
+  // Paths
+  "paths.h2": { zh: "推荐阅读路径", en: "Recommended Reading Paths" },
+  "paths.desc": { zh: '如果这套内容未来要对内展示、对外提案、甚至直接复用为前台入口，读者不应该自己猜"从哪篇开始"。下面这三条路径，是最符合人类阅读逻辑的入口。', en: "Whether for internal presentations, external proposals, or as a public entry point — readers shouldn't have to guess where to start. These three paths follow natural reading logic." },
+  "path1.title": { zh: "第一次看这套内容", en: "First time reading" },
+  "path1.desc": { zh: "先理解定位和方法，再进入一篇最稳的教育支柱文，最后再看产品或对比页。", en: "Start with positioning and methodology, then the strongest pillar article, then product or comparison pages." },
+  "path1.order": { zh: "建议顺序", en: "Suggested order" },
+  "path2.title": { zh: "要看转化和商业意图", en: "Evaluating conversion intent" },
+  "path2.desc": { zh: "先看高意图比较页，再看产品定义页，最后看市场榜单，最适合评估获客效率。", en: "Start with high-intent comparison pages, then product definition, then market listicle — best for evaluating acquisition efficiency." },
+  "path2.order": { zh: "建议顺序", en: "Suggested order" },
+  "path3.title": { zh: '要看"照片优先"为什么成立', en: "Why 'photos first' works" },
+  "path3.desc": { zh: "先用问题感知内容建立场景，再用科学论证形成背书，最后过渡到产品页。", en: "Build context with problem-awareness content, validate with science, then transition to the product page." },
+  "path3.order": { zh: "建议顺序", en: "Suggested order" },
+  // Library
+  "lib.h2": { zh: "内容资产库", en: "Content Library" },
+  "lib.desc": { zh: '所有内容按"读者此刻在解决什么问题"组织，而不是按文件编号组织。这样更适合前台浏览，也更适合未来直接复用为 SEO 展示页。', en: "All content organized by the reader's current problem — not by file number. Better for browsing and future reuse as SEO showcase." },
+  // Section heads
+  "sec.strategy": { zh: "战略与起手式", en: "Strategy & Starting Points" },
+  "sec.strategy.desc": { zh: '这两张卡定义"为什么做这套内容"以及"用户最终会落到哪"。适合第一次接触 PostMem SEO 体系的人先看。', en: 'These two cards define "why this content exists" and "where users ultimately land." Best for newcomers.' },
+  "sec.conversion": { zh: "高意图转化页面", en: "High-Intent Conversion Pages" },
+  "sec.conversion.desc": { zh: "这些内容面向已经有明确目标的读者。重点不是教育市场，而是帮助用户在几个解决方案之间更快做决定。", en: "Targeting readers with clear goals. The focus is helping them decide faster, not educating the market." },
+  "sec.education": { zh: "教育型支柱内容", en: "Educational Pillar Content" },
+  "sec.education.desc": { zh: "这部分负责建立问题意识、降低理解门槛，并持续为产品页和对比页输送高质量读者。每篇都回答一个不同阶段的问题。", en: "Builds problem awareness, lowers barriers, and feeds qualified readers to product and comparison pages. Each answers a different-stage question." },
+  // Card labels
+  "card.whatitdoes": { zh: "它在做什么", en: "What it does" },
+  "card.whatpage": { zh: "这个页面是什么", en: "What this page is" },
+  "card.problem": { zh: "解决什么问题", en: "What problem it solves" },
+  "card.when": { zh: "适合什么时候看", en: "When to read it" },
+  // Framework card
+  "fw.label": { zh: "战略基础", en: "Strategic Foundation" },
+  "fw.title": { zh: "SEO 七层框架详解", en: "SEO 7-Layer Framework" },
+  "fw.subtitle": { zh: "整套内容资产背后的战略蓝图", en: "The strategic blueprint behind all content assets" },
+  "fw.what": { zh: "把业务目标、关键词地图、页面类型、技术结构和数据验证串成一个闭环，解释为什么这 10 篇内容是合理的。", en: "Connects business goals, keyword maps, page types, tech structure, and data validation into a closed loop — explaining why these 10 pages make sense." },
+  "fw.when": { zh: "当你想先理解战略，而不是先看单篇文章时。", en: "When you want to understand the strategy before reading individual articles." },
+  "fw.link": { zh: "打开方法论页面", en: "Open methodology page" },
+  // Photo to Story AI card
+  "p4.subtitle": { zh: '把"照片变故事"定义成一个新能力，而不是一个抽象口号', en: "Defining 'photo to story' as a concrete capability, not an abstract slogan" },
+  "p4.what": { zh: "定义品类，解释 PostMem 的核心机制，并承接所有教育页和对比页的最终点击。", en: "Defines the category, explains PostMem's core mechanism, and receives final clicks from all education and comparison pages." },
+  "p4.problem": { zh: "用户已经知道自己想把照片整理成故事，但还不知道谁能做到、具体是怎么做到。", en: "The user knows they want to turn photos into stories but doesn't know who can do it or how." },
+  "p4.link": { zh: "打开功能页", en: "Open feature page" },
+  // This page card
+  "meta.label": { zh: "这个页面的工作", en: "What this page does" },
+  "meta.h3": { zh: '不是"列清单"，而是"帮判断"。', en: "Not a checklist — a decision helper." },
+  "meta.desc": { zh: '原版的问题在于信息密度大，但缺少方向感。这个版本把最先需要知道的信息放在前面：先给整体地图，再给推荐路径，再给每张内容卡片的作用和适合点开时机。', en: "The original had high info density but lacked direction. This version front-loads what matters: overall map first, then reading paths, then each card's role and when to open it." },
+  // StoryWorth Alt card
+  "p1.subtitle": { zh: "从照片开始，而不是从空白页开始", en: "Start with photos, not a blank page" },
+  "p1.what": { zh: "PostMem vs StoryWorth 的直接竞品拦截页，服务已经在搜索替代方案的用户。", en: "Direct competitor interception page — PostMem vs StoryWorth — serving users already searching for alternatives." },
+  "p1.problem": { zh: "用户不是来接受教育，而是来缩短决策路径，他需要的是对比和判断依据。", en: "Users aren't here to learn — they're here to decide. They need comparisons and evidence." },
+  "p1.link": { zh: "打开对比页", en: "Open comparison page" },
+  // vs card
+  "p6.subtitle": { zh: "写 / 说 / 照片三种入口的深度比较", en: "Deep comparison: writing / speaking / photos" },
+  "p6.what": { zh: "不是只做品牌对撞，而是把不同家庭的记录方式差异讲清楚。", en: "Not just brand collision — it explains how different families record stories differently." },
+  "p6.problem": { zh: "用户已经接近购买阶段，但在不同工具、不同输入方式之间摇摆不定。", en: "Users are close to buying but wavering between tools and input methods." },
+  "p6.link": { zh: "查看深度比较", en: "View deep comparison" },
+  // Gift card
+  "p8.subtitle": { zh: '把"保存故事"重新定义为一份真正有意义的礼物', en: "Reframing 'story preservation' as a truly meaningful gift" },
+  "p8.what": { zh: '节日与礼物经济切口的转化页，把产品进入场景从"工具"换成"礼物"。', en: "Gift economy conversion page — reframes the product entry from 'tool' to 'gift.'" },
+  "p8.problem": { zh: '用户的问题不是"要不要记录故事"，而是"送什么礼物能真正被记住"。', en: "The question isn't 'should I record stories?' but 'what gift will actually be remembered?'" },
+  "p8.link": { zh: "查看礼物页", en: "View gift page" },
+  // Best tools card
+  "p10.subtitle": { zh: "市场全景视角下的工具榜单与推荐框架", en: "Market landscape: tool rankings and recommendation framework" },
+  "p10.what": { zh: '市场型聚合页，适合承接"best tools / best apps"类高商业意图搜索。', en: "Market aggregation page for high-intent 'best tools' searches." },
+  "p10.problem": { zh: "用户要的是一张全景图，不只是某个品牌的一篇自我介绍。", en: "Users want a full market view, not just one brand's self-introduction." },
+  "p10.link": { zh: "查看工具榜单", en: "View tool rankings" },
+  // Old photos card
+  "p2.subtitle": { zh: '从"箱子里的照片怎么办"切入的入口级教育页', en: "Entry-level education: what to do with photos in the box" },
+  "p2.what": { zh: "面向问题感知阶段的读者，先帮他们处理眼前的混乱，再自然带出更深的故事保存需求。", en: "For problem-aware readers: help them handle the immediate chaos, then naturally lead to deeper story preservation." },
+  "p2.problem": { zh: '"我有很多旧照片，但根本不知道该怎么处理。"', en: '"I have so many old photos but no idea what to do with them."' },
+  "p2.link": { zh: "进入教育页", en: "Read education page" },
+  // Save stories card
+  "p3.subtitle": { zh: '用数据和方法打破"总有一天再做"的拖延', en: "Using data and methods to break the 'someday' procrastination" },
+  "p3.what": { zh: '情绪触发和行动指导兼具的支柱页，负责把"知道重要"推进到"开始动手"。', en: "A pillar page combining emotional triggers with action guidance — pushing from 'I know it matters' to 'I'm starting now.'" },
+  "p3.problem": { zh: '"我一直知道应该做，但总是没开始。"', en: '"I\'ve always known I should, but never started."' },
+  "p3.link": { zh: "查看支柱页", en: "View pillar page" },
+  // Science card
+  "p5.subtitle": { zh: '为"照片优先"定位建立理论与证据层背书', en: "Building scientific evidence for the 'photos first' positioning" },
+  "p5.what": { zh: '全站的证据底盘，其他文章谈"照片更能触发记忆"时，都应回流到这里。', en: "The site's evidence foundation — all other articles citing 'photos trigger memories' should flow back here." },
+  "p5.problem": { zh: '"为什么一定要从照片切入，而不是单纯提问？"', en: '"Why start with photos instead of just asking questions?"' },
+  "p5.link": { zh: "打开证据页", en: "Open evidence page" },
+  // Skip interview card
+  "p7.subtitle": { zh: "不从"采访"开始，而从照片开启自然对话", en: "Skip the formal interview — start natural conversations with photos" },
+  "p7.what": { zh: '反向叙事页，用一个更轻松的入口去拦截"how to interview grandparents"类搜索需求。', en: "Counter-narrative page intercepting 'how to interview grandparents' searches with a more relaxed approach." },
+  "p7.problem": { zh: "家人不喜欢被正式采访，但看到照片时却愿意自然讲起故事。", en: "Family members resist formal interviews but willingly share stories when shown old photos." },
+  "p7.link": { zh: "查看反向叙事页", en: "View counter-narrative page" },
+  // Preserve guide card
+  "p9.subtitle": { zh: "把方法、选择和行动计划放在一个核心总纲里", en: "Methods, choices, and action plans in one cornerstone guide" },
+  "p9.what": { zh: "站内最适合作为核心枢纽的综合指南页，负责承接广泛问题并分发到各子页。", en: "The site's best candidate for a cornerstone hub — receives broad queries and distributes to sub-pages." },
+  "p9.problem": { zh: '"我想做这件事，但不知道从哪种方法开始最合适。"', en: '"I want to do this but don\'t know which method fits best."' },
+  "p9.link": { zh: "进入核心指南", en: "Enter core guide" },
+  // Stats
+  "stats.h2": { zh: "这套内容目前覆盖了什么", en: "What This Content Covers" },
+  "stats.desc": { zh: '用统计卡片收尾，不是为了"好看"，而是为了让这套内容的边界和完成度更一眼可读。适合演示、复盘和对外展示。', en: "Stats for closing — making the content's scope and completeness readable at a glance. For demos, reviews, and presentations." },
+  "stats.pages": { zh: "内容页面", en: "Content Pages" },
+  "stats.pages.desc": { zh: "覆盖比较页、功能页、支柱文章和榜单页。", en: "Covering comparison, feature, pillar, and listicle pages." },
+  "stats.priority": { zh: "Priority A", en: "Priority A" },
+  "stats.priority.desc": { zh: "当前最值得优先投入和优先打磨的页面。", en: "Currently highest priority for investment and polish." },
+  "stats.schema": { zh: "Schema 标记", en: "Schema Markups" },
+  "stats.schema.desc": { zh: "FAQ、HowTo、Product 等结构化语义资产。", en: "FAQ, HowTo, Product structured data assets." },
+  "stats.roles": { zh: "主要角色", en: "Content Roles" },
+  "stats.roles.desc": { zh: "转化型、教育型、证据型三种内容角色协同工作。", en: "Conversion, education, and evidence roles working together." },
+  "stats.s1": { zh: "页面类型分布：", en: "Page types:" },
+  "stats.s1v": { zh: "对比页 ×2 · 功能页 ×1 · 支柱博客 ×6 · 聚合榜单 ×1", en: "Comparison ×2 · Feature ×1 · Pillar blog ×6 · Listicle ×1" },
+  "stats.s2": { zh: "内容职责分布：", en: "Content roles:" },
+  "stats.s2v": { zh: "不是每篇都负责转化。有的负责教育市场，有的负责建立证据，有的负责缩短购买决策路径。", en: "Not every page drives conversion. Some educate, some provide evidence, some shorten the buying path." },
+  "stats.s3": { zh: "这个版本的 UI 重点：", en: "UI focus:" },
+  "stats.s3v": { zh: "先让读者知道自己在哪里、应该怎么读、为什么点开，而不是把所有文章平铺成一张内部清单。", en: "Help readers know where they are, how to read, and why to click — instead of listing articles flat." },
+};
+
+let currentLang = localStorage.getItem('postmem-lang') || 'zh';
+
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  applyLang();
+  localStorage.setItem('postmem-lang', currentLang);
+}
+
+function applyLang() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[key]) {
+      const text = i18n[key][currentLang];
+      if (el.tagName === 'INPUT' || el.tagName === 'BUTTON') {
+        el.textContent = text;
+      } else {
+        el.innerHTML = text.replace(/\n/g, '<br>');
+      }
+    }
+  });
+  const btn = document.getElementById('langToggle');
+  btn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+}
+
+document.addEventListener('DOMContentLoaded', applyLang);
+</script>
 </body>
 </html>
