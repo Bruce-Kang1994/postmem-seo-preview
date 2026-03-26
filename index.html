@@ -734,7 +734,7 @@
         <a href="#paths" data-i18n="nav.paths">推荐路径</a>
         <a href="#library" data-i18n="nav.library">内容资产</a>
         <a href="#stats" data-i18n="nav.stats">统计</a>
-        <button id="langToggle" onclick="toggleLang()" style="padding:9px 16px;border-radius:999px;font-size:13px;color:var(--accent-deep);background:var(--accent-soft);border:1px solid rgba(184,114,63,0.2);cursor:pointer;font-family:ui-sans-serif,-apple-system,sans-serif;font-weight:700;transition:180ms ease;letter-spacing:0.02em;">EN</button>
+        <button id="langToggle" type="button" style="padding:9px 16px;border-radius:999px;font-size:13px;color:#8f5632;background:rgba(184,114,63,0.12);border:1px solid rgba(184,114,63,0.2);cursor:pointer;font-family:ui-sans-serif,-apple-system,sans-serif;font-weight:700;letter-spacing:0.02em;position:relative;z-index:30;">EN</button>
       </nav>
     </header>
 
@@ -1400,7 +1400,10 @@ function applyLang() {
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
 }
 
-document.addEventListener('DOMContentLoaded', applyLang);
+document.addEventListener('DOMContentLoaded', function() {
+  applyLang();
+  document.getElementById('langToggle').addEventListener('click', toggleLang);
+});
 </script>
 </body>
 </html>
