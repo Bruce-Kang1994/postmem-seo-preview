@@ -80,6 +80,14 @@
           "@type": "Answer",
           "text": "You can export your full archive (photos, stories, metadata) at any time in standard formats. We're also building automated backup notifications so you'll always have a local copy. Your stories belong to you, not to us."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data used to train AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your photos and stories are never used to train any AI model. They are stored encrypted, accessible only to you, and deletable at any time."
+        }
       }
     ]
   }
@@ -178,6 +186,8 @@
             <p class="text-brand/80 text-sm"><strong>Realistic example:</strong> You upload 847 photos from your phone's camera roll. PostMem groups them into 34 moments. Some groups are spot-on ("Thanksgiving 2019 — 11 photos"). Others need your help ("3 people at a table — location unknown"). The whole process takes about 4 minutes for 847 photos.</p>
             <p class="text-brand/50 text-sm mt-1"><strong>真实示例：</strong>你从手机相册上传了 847 张照片。PostMem 将它们分成 34 个时刻。有些分组很准确（"2019 年感恩节——11 张照片"）。有些需要你帮助（"3 个人在桌旁——地点未知"）。847 张照片的处理大约需要 4 分钟。</p>
           </div>
+          <div class="bg-brand/5 border-2 border-dashed border-brand/20 rounded-xl p-8 my-6 text-center text-brand/40 text-sm">[Product screenshot: The photo library view after initial upload — showing 4-5 auto-generated photo groups with thumbnail previews, suggested labels, and photo counts. One group should be expanded to show individual photos within it.]</div>
+          <p class="text-brand/50 text-xs text-center -mt-4 mb-2">产品截图：上传后的照片库视图——展示 4-5 个自动生成的照片分组，带缩略图预览、建议标签和照片数量。一个分组应展开显示其中的单张照片。</p>
         </div>
 
         <!-- Step 2 -->
@@ -195,6 +205,12 @@
             <p class="text-brand/80 text-sm"><strong>Realistic example:</strong> PostMem shows you 6 photos from a holiday dinner. It identifies 8 people, a turkey, and wood paneling. It asks: "Who are the people at this table?" and "What was the occasion?" You type: "That's my aunt Carol and uncle Pete at the head of the table. This was Thanksgiving 1998, the year Pete brought his accordion and played after dinner. Mom almost killed him." That becomes the opening of the story.</p>
             <p class="text-brand/50 text-sm mt-1"><strong>真实示例：</strong>PostMem 向你展示一次节日晚餐的 6 张照片。它识别出 8 个人、一只火鸡和木质墙板。它问："桌旁的人是谁？""这是什么场合？"你输入："坐在主位的是我 Carol 阿姨和 Pete 叔叔。这是 1998 年感恩节，Pete 那年带了手风琴晚餐后演奏。妈妈差点把他杀了。"这成为故事的开头。</p>
           </div>
+          <div class="bg-warm rounded-lg p-4 mt-4">
+            <p class="text-brand/80 text-sm"><strong>A quieter example:</strong> PostMem groups 8 photos of the same woman in a garden across 7 years. It asks: "Who is this person?" and "Is this the same location?" You record a voice note: "That's my mom. That's her garden on Elm Street. She spent every Saturday morning out there. The tomatoes were her pride and joy." Fifteen seconds of talking. A story that would never have been captured otherwise.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>一个更安静的例子：</strong>PostMem 将同一位女性在花园里跨越 7 年的 8 张照片归为一组。它问："这个人是谁？""这是同一个地方吗？"你录了一段语音："那是我妈妈。那是她在 Elm 街的花园。她每个周六早上都在那里。西红柿是她的骄傲。"十五秒的讲述。一个否则永远不会被记录的故事。</p>
+          </div>
+          <div class="bg-brand/5 border-2 border-dashed border-brand/20 rounded-xl p-8 my-6 text-center text-brand/40 text-sm">[Product screenshot: The question-and-answer interface for a single photo group — showing 3-4 photos in a row, AI-generated questions below them, and a text input / voice note button. Ideally show one answered question and one pending.]</div>
+          <p class="text-brand/50 text-xs text-center -mt-4 mb-2">产品截图：单个照片组的问答界面——展示一排 3-4 张照片，下方是 AI 生成的问题，以及文字输入/语音按钮。最好展示一个已回答和一个待回答的问题。</p>
         </div>
 
         <!-- Step 3 -->
@@ -216,6 +232,12 @@
             <li class="flex items-start gap-2"><span class="text-accent">✓</span> Printed book compilation (coming soon)</li>
             <li class="text-brand/50 text-sm list-none pl-6">印刷书汇编（即将推出）</li>
           </ul>
+          <div class="bg-warm rounded-lg p-4 mt-4">
+            <p class="text-brand/80 text-sm"><strong>Realistic example:</strong> You share the Thanksgiving 1998 story link in your family group chat. Your cousin replies: "I forgot about the accordion! I have more photos from that night." She uploads 4 more photos. The story gets richer.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>真实示例：</strong>你在家庭群聊中分享了 1998 年感恩节故事的链接。你表妹回复："我忘了手风琴的事！我还有那晚的更多照片。"她又上传了 4 张照片。故事变得更丰富了。</p>
+          </div>
+          <div class="bg-brand/5 border-2 border-dashed border-brand/20 rounded-xl p-8 my-6 text-center text-brand/40 text-sm">[Product screenshot: A finished, shareable story page — showing the narrative text interspersed with photos, a "Share" button, and the story title with date and people tags.]</div>
+          <p class="text-brand/50 text-xs text-center -mt-4 mb-2">产品截图：一个完成的可分享故事页面——展示叙述文字与照片交替排列，一个"分享"按钮，以及带日期和人物标签的故事标题。</p>
         </div>
       </div>
     </section>
@@ -368,8 +390,16 @@
       <h2 class="text-2xl font-bold mb-4 text-center">Current Status</h2>
       <p class="text-brand/50 text-sm mt-1 mb-6 text-center">当前状态</p>
       <div class="bg-brand/5 border border-brand/20 rounded-xl p-6 max-w-lg mx-auto">
-        <p class="text-brand/80 leading-relaxed mb-3">PostMem is in <strong>early access</strong>. Here's where things stand:</p>
-        <p class="text-brand/50 text-sm mt-1 mb-3">PostMem 目前处于<strong>早期访问</strong>阶段。以下是当前进展：</p>
+        <p class="text-brand/80 leading-relaxed mb-3">PostMem is in <strong>early access</strong>. Here's what that means concretely:</p>
+        <p class="text-brand/50 text-sm mt-1 mb-3">PostMem 目前处于<strong>早期访问</strong>阶段。具体来说：</p>
+        <ul class="text-sm text-brand/70 space-y-1 mb-4">
+          <li>• We're accepting a limited number of users — not everyone who signs up gets immediate access</li>
+          <li class="text-brand/50 text-xs list-none ml-4">我们接受的用户数量有限——不是所有注册者都能立即获得访问权限</li>
+          <li>• Response times may be slower than a mature product</li>
+          <li class="text-brand/50 text-xs list-none ml-4">响应时间可能比成熟产品慢</li>
+          <li>• Some features are rough around the edges — we'll tell you which ones</li>
+          <li class="text-brand/50 text-xs list-none ml-4">有些功能还比较粗糙——我们会告诉你是哪些</li>
+        </ul>
         <p class="font-bold text-sm text-brand mb-2">Live now:</p>
         <ul class="text-sm text-brand/70 space-y-1 mb-4">
           <li>• Photo upload (phone, computer, cloud accounts)</li>
@@ -444,7 +474,41 @@
           <p class="text-brand/80"><strong>People who want fully automated output with zero involvement.</strong> AI asks questions; you provide answers. No input = no story.</p>
           <p class="text-brand/50 text-sm mt-1"><strong>想要完全自动化、零参与的人。</strong>AI 提问；你回答。没有输入 = 没有故事。</p>
         </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <p class="text-brand/80"><strong>Families who need their stories in a language other than English.</strong> PostMem currently supports English only. We plan to add more languages in the future, but right now, questions, prompts, and story output are all in English.</p>
+        </div>
       </div>
+    </section>
+
+    <!-- How PostMem Compares -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">How PostMem Compares</h2>
+      <p class="text-brand/50 text-sm mt-1 mb-6">PostMem 与其他工具的对比</p>
+      <div class="space-y-3 text-sm">
+        <div class="flex items-start gap-3 bg-white rounded-xl p-5 shadow-sm">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>Google Photos</strong> organizes photos. Doesn't capture stories.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>Google Photos</strong> 整理照片。不记录故事。</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-white rounded-xl p-5 shadow-sm">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>StoryWorth</strong> captures stories through writing prompts. Starts from a blank page.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>StoryWorth</strong> 通过写作提示记录故事。从空白页开始。</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-white rounded-xl p-5 shadow-sm">
+          <span class="text-accent font-bold mt-1">•</span>
+          <div>
+            <p class="text-brand/80"><strong>PostMem</strong> starts with your photos. AI asks questions. You tell the stories.</p>
+            <p class="text-brand/50 text-sm mt-1"><strong>PostMem</strong> 从你的照片开始。AI 提问。你讲述故事。</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-brand/70 text-sm mt-4">For a detailed side-by-side comparison, see <a href="storyworth-alternative.html" class="text-accent hover:underline">StoryWorth vs. Remento vs. PostMem</a>.</p>
+      <p class="text-brand/50 text-sm mt-1">详细对比请查看 <a href="storyworth-alternative.html" class="text-accent hover:underline">StoryWorth vs. Remento vs. PostMem</a>。</p>
     </section>
 
     <!-- FAQ -->
@@ -482,6 +546,12 @@
           <p class="mt-3 text-brand/80 text-sm leading-relaxed">You can export your full archive (photos, stories, metadata) at any time in standard formats. We're also building automated backup notifications. Your stories belong to you, not to us.</p>
           <p class="text-brand/50 text-sm mt-1">你可以随时以标准格式导出完整档案（照片、故事、元数据）。我们还在构建自动备份通知。你的故事属于你，不是我们的。</p>
         </details>
+        <details class="group bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-bold cursor-pointer list-none flex justify-between items-center">Is my data used to train AI?<span class="text-accent group-open:rotate-180 transition-transform">▾</span></summary>
+          <p class="text-brand/50 text-sm mt-1">我的数据会被用来训练 AI 吗？</p>
+          <p class="mt-3 text-brand/80 text-sm leading-relaxed">No. Your photos and stories are never used to train any AI model. They are stored encrypted, accessible only to you, and deletable at any time.</p>
+          <p class="text-brand/50 text-sm mt-1">不会。你的照片和故事永远不会被用于训练任何 AI 模型。它们加密存储，只有你能访问，并且随时可以删除。</p>
+        </details>
       </div>
     </section>
 
@@ -496,8 +566,8 @@
 
     <!-- Author Byline -->
     <div class="text-center mb-8">
-      <p class="text-brand/40 text-sm">By PostMem Team · Published March 16, 2026 · Updated March 25, 2026</p>
-      <p class="text-brand/50 text-xs mt-1">PostMem 团队 · 发布于 2026 年 3 月 16 日 · 更新于 2026 年 3 月 25 日</p>
+      <p class="text-brand/40 text-sm">By PostMem Team · Published March 16, 2026 · Updated March 26, 2026</p>
+      <p class="text-brand/50 text-xs mt-1">PostMem 团队 · 发布于 2026 年 3 月 16 日 · 更新于 2026 年 3 月 26 日</p>
     </div>
 
     <!-- Sources -->
@@ -519,7 +589,7 @@
   </main>
 
   <footer class="max-w-4xl mx-auto px-6 py-8 border-t border-brand/10 text-sm text-brand/50 flex justify-between">
-    <span>Last updated: March 25, 2026 · &copy; 2026 PostMem</span>
+    <span>Last updated: March 26, 2026 · &copy; 2026 PostMem</span>
     <div class="space-x-4">
       <a href="storyworth-alternative.html" class="hover:text-accent">Compare</a>
       <a href="what-to-do-with-old-family-photos.html" class="hover:text-accent">Blog</a>
